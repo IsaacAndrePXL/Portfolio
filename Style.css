@@ -25,14 +25,14 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: "Inter", system-ui, sans-serif;
     color: var(--color-text-main);
     line-height: 1.6;
     background-color: var(--color-bg);
 }
 
 h1, h2, h3, h4, .logo, .nav-link, .btn-primary {
-    font-family: var(--font-display);
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 /* --- HEADER --- */
@@ -145,7 +145,7 @@ main {
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    font-family: var(--font-display);
+    font-family: "space Grotesk", system-ui, sans-serif;
 }
 
 .status-dot {
@@ -192,7 +192,7 @@ main {
     letter-spacing: 0.05em;
     color: var(--color-text-light);
     margin-bottom: 1rem;
-    font-family: var(--font-display);
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 .section-title {
@@ -319,7 +319,7 @@ main {
 }
 
 .skill-item {
-    font-family: var(--font-display);
+    font-family: "Inter", system-ui, sans-serif;
     font-size: 1rem;
     background: white;
     border: 1px solid rgba(0,0,0,0.1);
@@ -350,7 +350,7 @@ main {
 }
 
 .email-link {
-    font-family: var(--font-display);
+    font-family: "Space Grotesk", system-ui, sans-serif;
     font-size: 1.5rem;
     color: white;
     text-decoration: underline;
@@ -393,7 +393,7 @@ main {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Voor nu simpelweg verbergen op mobiel, of maak een hamburger menu */
+        display: none;
     }
 
     .header-content {
