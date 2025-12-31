@@ -1,4 +1,4 @@
-/* --- VARIABLES & RESET --- */
+/* --- 1. VARIABELEN & FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -12,8 +12,10 @@
     --color-text-light: #9ca3af;
     --color-primary: #111827;
     --color-accent: #10b981;
+    --color-border: rgba(0,0,0,0.08);
 }
 
+/* --- 2. BASIS RESET & GLOBAL --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,17 +27,17 @@ html {
 }
 
 body {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: var(--font-sans);
     color: var(--color-text-main);
     line-height: 1.6;
     background-color: var(--color-bg);
 }
 
-h1, h2, h3, h4, .logo, .nav-link, .btn-primary {
-    font-family: "Space Grotesk", system-ui, sans-serif;
+h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2 {
+    font-family: var(--font-display);
 }
 
-/* --- HEADER --- */
+/* --- 3. HEADER & NAVIGATIE --- */
 header {
     position: fixed;
     top: 0;
@@ -43,7 +45,7 @@ header {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--color-border);
     z-index: 1000;
 }
 
@@ -106,7 +108,26 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* --- LAYOUT UTILS --- */
+.btn-primary2 {
+    background-color: #f4f4f6;
+    color: #14181f;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.btn-primary2:hover {
+    background-color: #e5e7eb;
+}
+
+/* --- 4. STANDAARD LAYOUT UTILS --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -117,43 +138,60 @@ main {
     padding-top: 5rem;
 }
 
-.split-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+.section-content {
+    padding: 6rem 0;
+    background-color: #fbfbfc;
+}
+
+.section-content2 {
+    padding: 6rem 0;
+    background-color: #ffffff;
 }
 
 .bg-gray {
     background-color: var(--color-bg-alt);
 }
 
-/* --- HERO --- */
+.section-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.section-tag {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+}
+
+/* --- 5. HERO SECTION --- */
 .hero {
     padding: 8rem 0;
     min-height: 80vh;
     display: flex;
     align-items: center;
+    background-color: #fefbf9;
 }
 
 .status-badge {
     display: inline-flex;
     align-items: center;
-    background: var(--color-bg-alt);
+    background: #f4f4f6;
     color: var(--color-text-muted);
     padding: 6px 14px;
     border-radius: 9999px;
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    font-family: "space Grotesk", system-ui, sans-serif;
-}
-
-.status-dot {
-    height: 8px;
-    width: 8px;
-    background-color: var(--color-accent);
-    border-radius: 50%;
-    margin-right: 8px;
+    font-family: var(--font-display);
 }
 
 .hero-title {
@@ -167,8 +205,8 @@ main {
 
 .hero-subtitle {
     font-size: 2rem;
-    font-weight: 400;
-    color: var(--color-text-light);
+    font-weight: 500;
+    color: hsl(220 10% 45%);
     margin-bottom: 2rem;
 }
 
@@ -179,28 +217,24 @@ main {
     margin-bottom: 2.5rem;
 }
 
-/* --- SECTIONS STANDARD --- */
-.section-content {
-    padding: 6rem 0;
+/* --- 6. ABOUT --- */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
-.section-tag {
-    display: block;
-    text-transform: uppercase;
+.section-tag-pill {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: var(--color-text-muted);
+    padding: 6px 12px;
+    border-radius: 9999px;
     font-size: 0.85rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    color: var(--color-text-light);
-    margin-bottom: 1rem;
-    font-family: "Space Grotesk", system-ui, sans-serif;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    color: var(--color-primary);
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
 }
 
 .text-content p {
@@ -209,43 +243,75 @@ main {
     color: var(--color-text-muted);
 }
 
-/* --- FEATURES GRID (Visie) --- */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+/* De stapel kaarten rechts */
+.card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.feature-card {
+.feature-card-row {
     background: white;
     padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
-.feature-card h3 {
+.feature-card-row:hover {
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: rgba(0,0,0,0.15);
+}
+
+.feature-card-row h3 {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--color-primary);
 }
 
-.feature-card p, .style-list li {
+.feature-card-row p {
     font-size: 1rem;
     color: var(--color-text-muted);
+    margin-bottom: 0;
 }
 
-.style-list {
-    list-style: none;
-    padding-left: 0;
+/* Tags in de onderste kaart */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
 }
 
-.style-list li {
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--color-accent);
+.style-tag {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: var(--color-text-main);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    border: 1px solid transparent;
 }
 
-/* --- PROJECTS --- */
+.style-tag:hover {
+    background-color: #e5e7eb;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 6px 12px -2px rgba(0,0,0,0.08);
+    color: var(--color-primary);
+}
+
+/* --- 7. PROJECTEN & SKILLS LAYOUT --- */
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -260,6 +326,9 @@ main {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -305,17 +374,52 @@ main {
     text-transform: uppercase;
 }
 
-/* --- SKILLS --- */
+/* 1. De Container: Forceer dat ze links naast elkaar staan (geen grid!) */
+.skills-grid {
+    display: flex !important;    /* Forceer flexbox (overschrijft oude grid regels) */
+    flex-direction: row;         /* Naast elkaar */
+    flex-wrap: wrap;             /* Naar volgende regel als het niet past */
+    gap: 1rem;                   /* Ruimte tussen de knoppen */
+    justify-content: flex-start; /* Alles naar links */
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* 2. De Knoppen: Wit, rond en compact */
+.work-pill {
+    /* Zorg dat de knop niet groter is dan de tekst */
+    width: auto !important;
+    display: inline-block;
+
+    /* Styling zoals op je foto */
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;   /* Lichtgrijs randje */
+    border-radius: 9999px;       /* Pilvorm */
+    padding: 12px 24px;          /* Ruime padding binnenin */
+
+    /* Tekst styling */
+    color: #111827;              /* Donkere tekst */
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+
+    /* Animatie (optioneel) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+/* Hover effect */
+.work-pill:hover {
+    border-color: #111827;       /* Rand wordt donker bij hover */
+    transform: translateY(-2px); /* Klein sprongetje */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* --- SKILLS SPECIFIEK --- */
 .subsection-title {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: var(--color-primary);
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
 }
 
 .skill-item {
@@ -329,7 +433,7 @@ main {
     font-weight: 500;
 }
 
-/* --- FOOTER --- */
+/* --- 8. FOOTER --- */
 .footer-section {
     padding: 6rem 0 2rem 0;
     background-color: var(--color-primary);
@@ -337,46 +441,15 @@ main {
     text-align: center;
 }
 
-.footer-content h2 {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.footer-content p {
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-}
-
-.email-link {
-    font-family: "Space Grotesk", system-ui, sans-serif;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: rgba(255,255,255,0.3);
-    text-underline-offset: 8px;
-    transition: all 0.2s;
-}
-
-.email-link:hover {
-    text-decoration-color: white;
-}
-
-.footer-bottom {
-    margin-top: 5rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 2rem;
-}
-
-.footer-bottom p {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    margin-bottom: 0;
-}
-
-/* --- MOBILE RESPONSIVE --- */
+/* --- 9. RESPONSIVE / MOBIEL --- */
 @media (max-width: 900px) {
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+
     .split-layout {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -386,7 +459,8 @@ main {
         font-size: 3rem;
     }
 
-    .features-grid {
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -398,9 +472,5 @@ main {
 
     .header-content {
         justify-content: center;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
     }
 }
