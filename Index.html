@@ -11,16 +11,21 @@
 <header>
     <div class="header-content">
         <a href="#" class="logo">Isaac André</a>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <nav class="nav-links">
             <a href="#overmij" class="nav-link">Over Mij</a>
             <a href="#projecten" class="nav-link">Projecten</a>
             <a href="#skills" class="nav-link">Skills</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
             <a href="#contact" class="btn-primary">Contact</a>
         </nav>
     </div>
 </header>
-
 <main>
     <section class="hero">
         <div class="container">
@@ -35,11 +40,9 @@
 
     <section id="overmij" class="section-content2">
         <div class="container about-layout">
-
             <div class="about-text">
                 <span class="section-tag-pill">Over Mij</span>
                 <h2 class="section-title">Design is mijn passie,<br> code mijn tool.</h2>
-
                 <div class="text-content">
                     <p>
                         Hallo! Ik ben Isaac, een eerstejaars student Digitale Vormgeving aan Hogeschool PXL. Mijn reis in
@@ -57,17 +60,14 @@
             </div>
 
             <div class="card-stack">
-
                 <div class="feature-card-row">
                     <h3>Mijn visie op design</h3>
                     <p>Design moet functioneel én mooi zijn. Ik streef naar oplossingen die niet alleen goed ogen, maar ook intuïtief werken. Minimalisme is geen beperking, maar een krachtige tool om de essentie naar voren te brengen.</p>
                 </div>
-
                 <div class="feature-card-row">
                     <h3>Waarom ik een goede designer word</h3>
                     <p>Ik ben gedisciplineerd, leergierig en niet bang om te experimenteren. Mijn werkervaring in schoonmaak, horeca en verkoop heeft me geleerd om te werken onder druk, aandacht te hebben voor detail en effectief te communiceren.</p>
                 </div>
-
                 <div class="feature-card-row">
                     <h3>Mijn designstijl</h3>
                     <div class="tag-cloud">
@@ -92,7 +92,6 @@
             </div>
 
             <div class="projects-grid">
-
                 <a href="projecten/dishdash/Homepage.html" class="project-card">
                     <div class="card-image-wrapper">
                         <div class="card-image" style="background-color: #f3f4f6;"></div>
@@ -116,7 +115,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-category">SCHOOLPROJECT - SCRIPTING</span>
-                        <h3>Interactie Website</h3>
+                        <h3>Interactieve Website</h3>
                         <p>Kleine website gemaakt als oefening voor het vak Scripting. Volledig zelf opgebouwd: structuur, design en alle code.</p>
                         <div class="tags">
                             <span class="tag">HTML</span>
@@ -136,6 +135,7 @@
                         <p>Collectie van posters ontworpen in Photoshop en Figma. Focus op kleurgebruik, typografie en sterke visuele compositie.</p>
                         <div class="tags">
                             <span class="tag">Photoshop</span>
+                            <span class="tag">Illustrator</span>
                             <span class="tag">Figma</span>
                             <span class="tag">Graphic Design</span>
                         </div>
@@ -143,123 +143,217 @@
                 </article>
 
                 <article class="project-card">
-                    <div class="card-image-wrapper">
-                        <div class="card-image" style="background-color: #f3f4f6;"></div>
+                    <a href="projecten/Bakkerij/index.html">
+                        <div class="card-image-wrapper">
+                            <div class="card-image" style="background-color: #f3f4f6;"></div>
+                        </div>
+                        <div class="card-content">
+
+                            <span class="card-category">PERSOONLIJK PROJECT</span>
+                            <h3>Creatieve Experimenten</h3>
+                            <p>Persoonlijke concept-ontwerpen en visuele experimenten. Vrije projecten om nieuwe technieken en stijlen te verkennen.</p>
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Photoshop</span>
+                                <span class="tag">Exploration</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-content">
+        <div class="container">
+            <div class="section-header" style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <span class="section-tag">Skills & Expertise</span>
+                <h2 class="section-title">Wat ik in huis heb</h2>
+                <p class="section-subtitle">Een overzicht van mijn technische vaardigheden en werkervaring.</p>
+            </div>
+
+            <div class="skills-cards-grid">
+
+                <div class="skill-card">
+                    <div class="card-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg-icon">
+                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                        </svg>
                     </div>
-                    <div class="card-content">
-                        <span class="card-category">PERSOONLIJK PROJECT</span>
-                        <h3>Creatieve Experimenten</h3>
-                        <p>Persoonlijke concept-ontwerpen en visuele experimenten. Vrije projecten om nieuwe technieken en stijlen te verkennen.</p>
-                        <div class="tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Photoshop</span>
-                            <span class="tag">Exploration</span>
+                    <h3>Design Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-list-item">
+                            <span class="skill-name">Photoshop</span>
+                            <span class="skill-level">Gevorderd</span>
+                        </div>
+                        <div class="skill-list-item">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-level">Gevorderd</span>
+                        </div>
+                        <div class="skill-list-item">
+                            <span class="skill-name">Illustrator</span>
+                            <span class="skill-level">Beginner</span>
+                        </div>
+                        <div class="skill-list-item">
+                            <span class="skill-name">UI/UX Design</span>
+                            <span class="skill-level">Gevorderd</span>
                         </div>
                     </div>
-                </article>
+                </div>
 
+                <div class="skill-card">
+                    <div class="card-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg-icon">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-list-item">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-level">Gevorderd</span>
+                        </div>
+                        <div class="skill-list-item">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-level">Gevorderd</span>
+                        </div>
+                        <div class="skill-list-item">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-level">Gemiddeld</span>
+                        </div>
+                        <div class="skill-list-item">
+                            <span class="skill-name">Webstorm</span>
+                            <span class="skill-level">Tool</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="card-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg-icon">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3>Ervaring buiten DVO</h3>
+                    <div class="skill-list">
+                        <div class="skill-list-item experience-item">
+                            <span class="skill-name">Schoonmaak</span>
+                        </div>
+                        <div class="skill-list-item experience-item">
+                            <span class="skill-name">Horeca</span>
+                        </div>
+                        <div class="skill-list-item experience-item">
+                            <span class="skill-name">Verkoop</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="werkervaring" class="section-content-white">
+    <section id="designstijl" class="section-content-white">
         <div class="container">
-            <div class="section-divider"></div>
-
-            <div class="experience-content">
-                <h3 class="experience-title">Werkervaring</h3>
-
-                <p class="experience-text">
-                    Naast mijn designwerk heb ik ervaring opgedaan in verschillende sectoren, wat mij heeft geleerd om gedisciplineerd, sociaal en resultaatgericht te werken.
-                </p>
-
-                <div class="pills-wrapper">
-                    <span class="work-pill">Schoonmaak</span>
-                    <span class="work-pill">Horeca</span>
-                    <span class="work-pill">Verkoop</span>
-                </div>
+            <div class="section-header center-text">
+                <h2 class="section-title">Mijn Persoonlijke Designstijl</h2>
+            </div>
+            <div class="design-pills-container">
+                <span class="design-pill">Rustig</span>
+                <span class="design-pill">Modern</span>
+                <span class="design-pill">Strak</span>
+                <span class="design-pill">Clean</span>
+                <span class="design-pill">Grote Typografie</span>
+                <span class="design-pill">Functioneel</span>
+                <span class="design-pill">Minimalistisch</span>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section-content"> <div class="container">
-        <div class="section-header" style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-            <span class="section-tag">Skills & Expertise</span>
-            <h2 class="section-title">Wat ik in huis heb</h2>
-            <p class="section-subtitle">Een overzicht van mijn technische vaardigheden en werkervaring.</p>
+    <section id="contact" class="section-content">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-tag">Contact</span>
+                        <h2 class="section-title">Laten we samenwerken</h2>
+                        <p class="section-subtitle">
+                            Heb je een project in gedachten of wil je gewoon even connecten? Stuur gerust een bericht!
+                        </p>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <div class="detail-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="detail-icon">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Email</span>
+                                <a href="mailto:isaac.andre@student.pxl.be" class="detail-value">isaac.andre@student.pxl.be</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="detail-icon">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Locatie</span>
+                                <span class="detail-value">Hasselt, België</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form-card" name="contact" method="POST" data-netlify="true">
+
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <div class="form-group">
+                            <label for="naam">Naam</label>
+                            <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jouw@email.be" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bericht">Bericht</label>
+                            <textarea id="bericht" name="bericht" rows="4" placeholder="Vertel me over je project..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            Verstuur bericht
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" x2="11" y1="2" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="skills-cards-grid">
-
-            <div class="skill-card">
-                <div class="card-icon-wrapper">
-                    <span class="card-icon">L</span>
-                </div>
-                <h3>Design Tools</h3>
-                <div class="skill-list">
-                    <div class="skill-list-item">
-                        <span class="skill-name">Photoshop</span>
-                        <span class="skill-level">Gevorderd</span>
-                    </div>
-                    <div class="skill-list-item">
-                        <span class="skill-name">Figma</span>
-                        <span class="skill-level">Gevorderd</span>
-                    </div>
-                    <div class="skill-list-item">
-                        <span class="skill-name">Illustrator</span>
-                        <span class="skill-level">Beginner</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="card-icon-wrapper">
-                    <span class="card-icon">💻</span>
-                </div>
-                <h3>Development</h3>
-                <div class="skill-list">
-                    <div class="skill-list-item">
-                        <span class="skill-name">HTML</span>
-                        <span class="skill-level">Gevorderd</span>
-                    </div>
-                    <div class="skill-list-item">
-                        <span class="skill-name">CSS</span>
-                        <span class="skill-level">Gevorderd</span>
-                    </div>
-                    <div class="skill-list-item">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-level">Gemiddeld</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="card-icon-wrapper">
-                    <span class="card-icon">💼</span>
-                </div>
-                <h3>Ervaring buiten DVO</h3>
-                <div class="skill-list">
-                    <div class="skill-list-item experience-item">
-                        <span class="skill-name">Schoonmaak</span>
-                    </div>
-                    <div class="skill-list-item experience-item">
-                        <span class="skill-name">Horeca</span>
-                    </div>
-                    <div class="skill-list-item experience-item">
-                        <span class="skill-name">Verkoop</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
     </section>
-
-                <br><br>
-                <footer>
-                    <p style="font-size: 0.875rem; color: #9ca3af;">© 2025 Isaac André. Alle rechten voorbehouden.</p>
-                </footer>
 </main>
 
+<footer>
+    <div class="container">
+        <p style="font-size: 0.875rem; color: #9ca3af; text-align: center;">© 2025 Isaac André. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
