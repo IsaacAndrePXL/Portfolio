@@ -1,0 +1,224 @@
+/* --- FONTS & VARIABELEN --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --accent: #ff0055;
+    --accent-hover: #ff3377;
+}
+
+/* --- BASIS INSTELLINGEN --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HERO & NAVIGATIE --- */
+header.hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    background: radial-gradient(circle at center, #2a2a2a 0%, #121212 70%);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.nav-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-card {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.nav-card:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.3);
+}
+
+/* --- FESTIVAL SECTIES --- */
+.festival-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0;
+    border-bottom: 1px solid #333;
+}
+
+.festival-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-col {
+    flex: 1;
+}
+
+.img-col {
+    flex: 1;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.location {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+.btn-back {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: var(--accent);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 60px 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* --- MOBIEL (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .festival-row, .festival-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .img-col {
+        order: -1;
+        width: 100%;
+    }
+}
+
+/* Universal Back Button Styles */
+.universal-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+    z-index: 99999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.universal-back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: #f9fafb;
+}
+
+.universal-back-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+}
+
+@media (max-width: 600px) {
+    .universal-back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

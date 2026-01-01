@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --primary: #c68e17; /* Goudbruin */
-    --secondary: #3e2723; /* Donkerbruin */
-    --bg-light: #fdfbf7; /* Crème wit */
+    --primary: #c68e17;
+    --secondary: #3e2723;
+    --bg-light: #fdfbf7;
     --text: #a49c9c;
     --white: #fff;
     --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --font-sans: "Inter", sans-serif;
+    --font-display: "Space Grotesk", sans-serif;
 }
 
 * {
@@ -199,7 +203,7 @@ footer {
 @media (max-width: 768px) {
     .grid-2 { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
-    .nav-links { display: none; } /* Simpele oplossing voor mobiel menu */
+    .nav-links { display: none; }
     .navbar { justify-content: center; }
 }
 
@@ -207,4 +211,47 @@ footer {
     margin-top: 20px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+/* Universal Back Button Styles */
+.universal-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+    z-index: 99999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.universal-back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: #f9fafb;
+}
+
+.universal-back-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+}
+
+@media (max-width: 600px) {
+    .universal-back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }
