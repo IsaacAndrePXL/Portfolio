@@ -1,4 +1,6 @@
-/* --- 1. VARIABELEN & FONTS --- */
+/* =========================================
+   1. VARIABELEN, RESET & GLOBAL
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -6,16 +8,14 @@
     --font-display: "Space Grotesk", system-ui, sans-serif;
 
     --color-bg: #ffffff;
-    --color-bg-alt: #f9fafb;
-    --color-text-main: #111827;
-    --color-text-muted: #4b5563;
-    --color-text-light: #9ca3af;
-    --color-primary: #111827;
-    --color-accent: #10b981;
+    --color-bg-alt: #f9fafb;     /* Lichtgrijs voor vlakken */
+    --color-text-main: #111827;  /* Donker */
+    --color-text-muted: #4b5563; /* Grijs */
+    --color-text-light: #9ca3af; /* Lichtgrijs */
+    --color-primary: #111827;    /* Hoofdkleur (zwart/donkerblauw) */
     --color-border: rgba(0,0,0,0.08);
 }
 
-/* --- 2. BASIS RESET & GLOBAL --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -37,13 +37,60 @@ h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2 {
     font-family: var(--font-display);
 }
 
-/* --- 3. HEADER & NAVIGATIE --- */
+/* Standaard container voor breedte */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Algemene sectie titels */
+.section-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.section-tag, .section-tag-pill {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.section-content {
+    padding: 6rem 0;
+    background-color: #fbfbfc; /* Lichtgrijs blok */
+}
+
+.section-content2 {
+    padding: 6rem 0;
+    background-color: #ffffff; /* Wit blok */
+}
+
+/* =========================================
+   2. HEADER & NAVIGATIE
+   ========================================= */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    /* De gevraagde transparantie */
+    background-color: rgba(250, 248, 245, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
@@ -127,52 +174,13 @@ header {
     background-color: #e5e7eb;
 }
 
-/* --- 4. STANDAARD LAYOUT UTILS --- */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
 main {
-    padding-top: 5rem;
+    padding-top: 5rem; /* Compenseer voor fixed header */
 }
 
-.section-content {
-    padding: 6rem 0;
-    background-color: #fbfbfc;
-}
-
-.section-content2 {
-    padding: 6rem 0;
-    background-color: #ffffff;
-}
-
-.bg-gray {
-    background-color: var(--color-bg-alt);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    color: var(--color-primary);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-}
-
-.section-tag {
-    display: block;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: var(--color-text-light);
-    margin-bottom: 1rem;
-    font-family: var(--font-display);
-}
-
-/* --- 5. HERO SECTION --- */
 .hero {
     padding: 8rem 0;
     min-height: 80vh;
@@ -217,24 +225,14 @@ main {
     margin-bottom: 2.5rem;
 }
 
-/* --- 6. ABOUT --- */
+/* =========================================
+   4. ABOUT SECTIE (Over Mij)
+   ========================================= */
 .about-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
-}
-
-.section-tag-pill {
-    display: inline-block;
-    background-color: #f3f4f6;
-    color: var(--color-text-muted);
-    padding: 6px 12px;
-    border-radius: 9999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    font-family: var(--font-display);
 }
 
 .text-content p {
@@ -243,7 +241,6 @@ main {
     color: var(--color-text-muted);
 }
 
-/* De stapel kaarten rechts */
 .card-stack {
     display: flex;
     flex-direction: column;
@@ -278,7 +275,6 @@ main {
     margin-bottom: 0;
 }
 
-/* Tags in de onderste kaart */
 .tag-cloud {
     display: flex;
     flex-wrap: wrap;
@@ -293,7 +289,7 @@ main {
     border-radius: 0.75rem;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s ease;
     cursor: default;
     border: 1px solid transparent;
 }
@@ -305,24 +301,25 @@ main {
     color: var(--color-primary);
 }
 
-/* --- 7. PROJECTEN & SKILLS LAYOUT --- */
-.split-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+/* =========================================
+   5. PROJECTEN SECTIE
+   ========================================= */
+.section-header {
+    margin-bottom: 3rem;
+    max-width: 600px;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Twee kolommen */
     gap: 2rem;
 }
 
 .project-card {
     background: white;
-    border-radius: 24px;
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -336,25 +333,43 @@ main {
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-.card-image {
-    height: 240px;
+.card-image-wrapper {
     width: 100%;
-    background-color: #e5e7eb;
+    height: 250px;
+    padding: 20px 20px 0 20px;
+}
+
+.card-image {
+    height: 100%;
+    width: 100%;
+    background-color: #f3f4f6; /* Placeholder kleur */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .card-content {
-    padding: 2rem;
+    padding: 1.5rem;
+}
+
+.card-category {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9ca3af;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
 }
 
 .card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--color-primary);
     margin-bottom: 0.75rem;
 }
 
 .card-content p {
     color: var(--color-text-muted);
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 1.5rem;
 }
 
@@ -366,101 +381,190 @@ main {
 
 .tag {
     font-size: 0.75rem;
-    background-color: var(--color-bg-alt);
-    color: var(--color-text-muted);
+    background-color: #f3f4f6;
+    color: #14181f;
     padding: 0.4rem 0.8rem;
     border-radius: 9999px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
 }
 
-/* 1. De Container: Forceer dat ze links naast elkaar staan (geen grid!) */
-.skills-grid {
-    display: flex !important;    /* Forceer flexbox (overschrijft oude grid regels) */
-    flex-direction: row;         /* Naast elkaar */
-    flex-wrap: wrap;             /* Naar volgende regel als het niet past */
-    gap: 1rem;                   /* Ruimte tussen de knoppen */
-    justify-content: flex-start; /* Alles naar links */
-    align-items: center;
-    margin-top: 1rem;
-}
-
-/* 2. De Knoppen: Wit, rond en compact */
-.work-pill {
-    /* Zorg dat de knop niet groter is dan de tekst */
-    width: auto !important;
-    display: inline-block;
-
-    /* Styling zoals op je foto */
+/* =========================================
+   6. WERKERVARING SECTIE (Nieuw)
+   ========================================= */
+.section-content-white {
     background-color: #ffffff;
-    border: 1px solid #e5e7eb;   /* Lichtgrijs randje */
-    border-radius: 9999px;       /* Pilvorm */
-    padding: 12px 24px;          /* Ruime padding binnenin */
+    padding: 4rem 0;
+}
 
-    /* Tekst styling */
-    color: #111827;              /* Donkere tekst */
+.section-divider {
+    border-top: 1px solid #e5e7eb;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.experience-content {
+    max-width: 600px;
+}
+
+.experience-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.experience-text {
+    font-family: var(--font-sans);
+    color: #676F7EFF;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.pills-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.work-pill {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 9999px;
+    padding: 12px 24px;
+    color: #111827;
     font-size: 0.95rem;
     font-weight: 500;
     text-align: center;
-
-    /* Animatie (optioneel) */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: default;
+    width: auto !important;
+    font-family: var(--font-sans);
 }
 
-/* Hover effect */
 .work-pill:hover {
-    border-color: #111827;       /* Rand wordt donker bij hover */
-    transform: translateY(-2px); /* Klein sprongetje */
+    border-color: #111827;
+    transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* --- SKILLS SPECIFIEK --- */
-.subsection-title {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
+/* =========================================
+   6. SKILLS & EXPERTISE SECTIE (Nieuw)
+   ========================================= */
+
+/* Grid voor de 3 kaarten */
+.skills-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
 }
 
-.skill-item {
-    font-family: "Inter", system-ui, sans-serif;
-    font-size: 1rem;
+.skill-card {
     background: white;
-    border: 1px solid rgba(0,0,0,0.1);
-    padding: 0.6rem 1.2rem;
     border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+}
+
+.skill-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skill-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.skill-name {
+    font-weight: 500;
     color: var(--color-text-main);
+}
+
+.skill-level {
+    font-size: 0.85rem;
+    color: #9ca3af;
     font-weight: 500;
 }
 
-/* --- 8. FOOTER --- */
-.footer-section {
-    padding: 6rem 0 2rem 0;
-    background-color: var(--color-primary);
-    color: white;
-    text-align: center;
+.experience-item {
+    justify-content: flex-start;
+    background-color: #f9fafb;
 }
 
-/* --- 9. RESPONSIVE / MOBIEL --- */
-@media (max-width: 900px) {
+/* =========================================
+   8. FOOTER
+   ========================================= */
+footer {
+    background-color: #f3f4f6;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
 
+/* =========================================
+   9. RESPONSIVE / MEDIA QUERIES
+   ========================================= */
+@media (max-width: 900px) {
     .about-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-
-
-    .split-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
     .hero-title {
         font-size: 3rem;
     }
 
-
     .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+
+    .skills-cards-grid {
         grid-template-columns: 1fr;
     }
 }
