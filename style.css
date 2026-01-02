@@ -1,17 +1,5 @@
-/* --- 1. VARIABELEN & BASIS --- */
+/* --- 1. BASIS & FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
-:root {
-    --font-sans: "Inter", system-ui, sans-serif;
-    --font-display: "Space Grotesk", system-ui, sans-serif;
-    --color-bg: #ffffff;
-    --color-bg-alt: #f9fafb;
-    --color-text-main: #111827;
-    --color-text-muted: #4b5563;
-    --color-text-light: #9ca3af;
-    --color-primary: #111827;
-    --color-border: rgba(0,0,0,0.08);
-}
 
 * {
     box-sizing: border-box;
@@ -24,14 +12,114 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
-    color: var(--color-text-main);
+    font-family: "Inter", system-ui, sans-serif;
+    color: #111827;
     line-height: 1.6;
-    background-color: var(--color-bg);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2 {
-    font-family: var(--font-display);
+h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2, .hero-title, .status-badge {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 2. HEADER & NAVIGATIE --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    height: 5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #111827;
+    background-color: #f9fafb;
+}
+
+.btn-primary {
+    background-color: #111827;
+    color: white;
+    font-weight: 500;
+    padding: 0.7rem 1.4rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-primary2 {
+    background-color: #f4f4f6;
+    color: #14181f;
+    font-weight: 500;
+    padding: 0.7rem 1.4rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.btn-primary2:hover {
+    background-color: #e5e7eb;
+}
+
+/* --- 3. ALGEMENE SECTIES & LAYOUT --- */
+main {
+    padding-top: 5rem;
+    flex: 1;
 }
 
 .container {
@@ -43,7 +131,7 @@ h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2 {
 .section-title {
     font-size: 2.5rem;
     line-height: 1.1;
-    color: var(--color-primary);
+    color: #111827;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -64,6 +152,7 @@ h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2 {
     font-size: 0.85rem;
     font-weight: 500;
     margin-bottom: 1rem;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 .section-content {
@@ -76,124 +165,27 @@ h1, h2, h3, h4, .logo, .nav-link, .btn-primary, .btn-primary2 {
     background-color: #ffffff;
 }
 
-a {
-    text-decoration: none;
+.section-header {
+    margin-bottom: 3rem;
+    max-width: 600px;
 }
 
-/* --- 2. HEADER & NAVIGATIE --- */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(250, 248, 245, 0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-border);
-    z-index: 1000;
-}
-
-.header-content {
-    max-width: 1200px;
-    height: 5rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.nav-link {
-    color: var(--color-text-muted);
-    font-weight: 500;
-    font-size: 0.95rem;
-    text-decoration: none;
-    padding: 0.5rem 0.8rem;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--color-primary);
-    background-color: var(--color-bg-alt);
-}
-
-.btn-primary {
-    background-color: var(--color-primary);
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0.7rem 1.4rem;
-    border-radius: 9999px;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background-color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.btn-primary2 {
-    background-color: #f4f4f6;
-    color: #14181f;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0.7rem 1.4rem;
-    border-radius: 9999px;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    margin-left: 0.5rem;
-}
-
-.btn-primary2:hover {
-    background-color: #e5e7eb;
-}
-
-/* --- 3. HERO SECTIE --- */
-main {
-    padding-top: 5rem;
-}
-
+/* --- 4. HERO SECTIE --- */
 .hero {
-    padding: 8rem 0;
-    min-height: 80vh;
+    min-height: calc(100vh - 5rem);
+    padding: 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     background-color: #fefbf9;
+    position: relative;
 }
 
-.status-badge {
-    display: inline-flex;
-    align-items: center;
-    background: #f4f4f6;
-    color: var(--color-text-muted);
-    padding: 6px 14px;
-    border-radius: 9999px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    font-family: var(--font-display);
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .hero-title {
@@ -202,24 +194,59 @@ main {
     font-weight: 700;
     letter-spacing: -0.03em;
     margin-bottom: 1rem;
-    color: var(--color-primary);
+    color: #111827;
 }
 
 .hero-subtitle {
     font-size: 2rem;
     font-weight: 500;
-    color: hsl(220 10% 45%);
+    color: #6b7280;
     margin-bottom: 2rem;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 .hero-bio {
     font-size: 1.25rem;
-    color: var(--color-text-muted);
+    color: #6b7280;
     max-width: 600px;
     margin-bottom: 2.5rem;
 }
 
-/* --- 4. OVER MIJ --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #9ca3af;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* --- 5. OVER MIJ --- */
 .about-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -230,7 +257,7 @@ main {
 .text-content p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: var(--color-text-muted);
+    color: #6b7280;
 }
 
 .card-stack {
@@ -243,10 +270,9 @@ main {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--color-border);
+    border: 1px solid #e5e7eb;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
     transition: all 0.3s ease;
-    cursor: default;
 }
 
 .feature-card-row:hover {
@@ -258,12 +284,13 @@ main {
 .feature-card-row h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
-    color: var(--color-primary);
+    color: #111827;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 .feature-card-row p {
     font-size: 1rem;
-    color: var(--color-text-muted);
+    color: #6b7280;
     margin-bottom: 0;
 }
 
@@ -276,13 +303,12 @@ main {
 .style-tag {
     display: inline-block;
     background-color: #f3f4f6;
-    color: var(--color-text-main);
+    color: #111827;
     padding: 0.5rem 1rem;
     border-radius: 0.75rem;
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.4s ease;
-    cursor: default;
     border: 1px solid transparent;
 }
 
@@ -290,15 +316,10 @@ main {
     background-color: #e5e7eb;
     transform: scale(1.1) rotate(-2deg);
     box-shadow: 0 6px 12px -2px rgba(0,0,0,0.08);
-    color: var(--color-primary);
+    color: #111827;
 }
 
-/* --- 5. PROJECTEN --- */
-.section-header {
-    margin-bottom: 3rem;
-    max-width: 600px;
-}
-
+/* --- 6. PROJECTEN --- */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -313,9 +334,8 @@ main {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    color: inherit;
     cursor: pointer;
+    position: relative;
 }
 
 .project-card:hover {
@@ -335,6 +355,8 @@ main {
     background-color: #f3f4f6;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    background-size: cover;
+    background-position: center;
 }
 
 .card-content {
@@ -353,12 +375,13 @@ main {
 
 .card-content h3 {
     font-size: 1.25rem;
-    color: var(--color-primary);
+    color: #111827;
     margin-bottom: 0.75rem;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 .card-content p {
-    color: var(--color-text-muted);
+    color: #6b7280;
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
 }
@@ -378,7 +401,7 @@ main {
     font-weight: 500;
 }
 
-/* --- 6. SKILLS & EXPERTISE --- */
+/* --- 7. SKILLS & EXPERTISE --- */
 .skills-cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -409,7 +432,7 @@ main {
     background-color: #f3f4f6;
     border-radius: 50%;
     margin-bottom: 1rem;
-    color: var(--color-primary);
+    color: #111827;
 }
 
 .card-svg-icon {
@@ -419,10 +442,10 @@ main {
 }
 
 .skill-card h3 {
-    font-family: var(--font-display);
+    font-family: "Space Grotesk", system-ui, sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: #111827;
     margin-bottom: 1.5rem;
 }
 
@@ -439,14 +462,14 @@ main {
     background-color: #f9fafb;
     padding: 0.75rem 1rem;
     border-radius: 8px;
-    font-family: var(--font-sans);
+    font-family: "Inter", system-ui, sans-serif;
     font-size: 0.95rem;
     text-align: left;
 }
 
 .skill-name {
     font-weight: 500;
-    color: var(--color-text-main);
+    color: #111827;
 }
 
 .skill-level {
@@ -460,13 +483,15 @@ main {
     background-color: #f9fafb;
 }
 
-/* --- 7. DESIGN STIJL --- */
+/* --- 8. DESIGN STIJL --- */
 .center-text {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
 }
+
+
 
 .design-pills-container {
     display: flex;
@@ -482,8 +507,8 @@ main {
     border: 1px solid #e5e7eb;
     border-radius: 9999px;
     padding: 12px 28px;
-    color: var(--color-text-main);
-    font-family: var(--font-sans);
+    color: #111827;
+    font-family: "Inter", system-ui, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -491,12 +516,12 @@ main {
 }
 
 .design-pill:hover {
-    border-color: var(--color-primary);
+    border-color: #111827;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* --- 8. CONTACT --- */
+/* --- 9. CONTACT --- */
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -526,7 +551,7 @@ main {
     background-color: white;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
-    color: var(--color-primary);
+    color: #111827;
 }
 
 .detail-icon {
@@ -549,8 +574,7 @@ main {
 .detail-value {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-primary);
-    text-decoration: none;
+    color: #111827;
 }
 
 .contact-form-card {
@@ -570,26 +594,26 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--color-primary);
+    color: #111827;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px 16px;
-    font-family: var(--font-sans);
+    font-family: "Inter", system-ui, sans-serif;
     font-size: 0.95rem;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     background-color: #ffffff;
     transition: all 0.2s ease;
-    color: var(--color-text-main);
+    color: #111827;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: #111827;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
@@ -620,16 +644,162 @@ main {
     height: 16px;
 }
 
-/* --- 9. FOOTER --- */
+/* --- 10. FOOTER --- */
 footer {
-    background-color: #f3f4f6;
-    padding: 2rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #6b7280;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 40px 0;
+    margin-top: auto;
 }
 
-/* --- 10. JAVASCRIPT & HAMBURGER --- */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-brand {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111827;
+}
+
+.footer-tagline {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.copyright {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 5px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #111827;
+}
+
+.separator {
+    color: #e5e7eb;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-meta {
+        align-items: center;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+/* --- 11. PRIVACY PAGINA SPECIFIEK --- */
+.policy-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.policy-container h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 10px;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+.policy-container h2 {
+    font-size: 1.25rem;
+    color: #111827;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 600;
+}
+
+.date {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    display: block;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+}
+
+.policy-container p {
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.policy-container a {
+    color: #111827;
+    text-decoration: underline;
+}
+
+.policy-container a:hover {
+    color: #4b5563;
+}
+
+.back-nav {
+    padding: 20px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #111827;
+}
+
+
+/* --- 12. MOBILE MENU & RESPONSIVE --- */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -641,22 +811,10 @@ footer {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--color-primary);
+    background-color: #111827;
     transition: all 0.3s ease;
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- 11. MEDIA QUERIES (MOBIEL) --- */
 @media (max-width: 900px) {
     .about-layout {
         grid-template-columns: 1fr;
@@ -720,5 +878,99 @@ footer {
     }
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .policy-container {
+        padding: 30px;
+        margin: 20px;
+    }
+}
+
+/* --- REFLECTIE PAGINA STYLING --- */
+
+.reflectie-hero {
+    padding: 6rem 0 4rem 0;
+    background-color: #fefbf9;
+    text-align: left;
+}
+
+.reflectie-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+}
+
+.reflectie-block {
+    background: white;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.reflectie-block h2 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: #111827;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 0.5rem;
+}
+
+.reflectie-text h3 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: #111827;
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reflectie-text p {
+    font-family: "Inter", system-ui, sans-serif;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.learning-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.learning-list li {
+    background-color: #f9fafb;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #111827;
+    color: #4b5563;
+}
+
+.learning-list strong {
+    color: #111827;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .reflectie-block {
+        padding: 1.5rem;
+    }
+
+    .reflectie-block h2 {
+        font-size: 1.5rem;
     }
 }

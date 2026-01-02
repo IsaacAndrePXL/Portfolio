@@ -209,12 +209,173 @@ body {
 /* =========================================
    7. FOOTER
    ========================================= */
-footer {
-    text-align: center;
-    margin-top: 80px;
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-}
+    /* --- 10. FOOTER --- */
+    footer {
+        background-color: #ffffff;
+        border-top: 1px solid #e5e7eb;
+        padding: 40px 0;
+        margin-top: auto;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .footer-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-brand {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #111827;
+    }
+
+    .footer-tagline {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        color: #4b5563;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .copyright {
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 0.8rem;
+        color: #9ca3af;
+    }
+
+    .footer-nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 5px;
+    }
+
+    .footer-link {
+        text-decoration: none;
+        color: #6b7280;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+        color: #111827;
+    }
+
+    .separator {
+        color: #e5e7eb;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .footer-meta {
+            align-items: center;
+        }
+
+        .footer-nav {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0;
+        }
+    }/* --- 10. FOOTER --- */
+    footer {
+        background-color: #ffffff;
+        border-top: 1px solid #e5e7eb;
+        padding: 40px 0;
+        margin-top: auto;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .footer-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-brand {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #111827;
+    }
+
+    .footer-tagline {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        color: #4b5563;
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .copyright {
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 0.8rem;
+        color: #9ca3af;
+    }
+
+    .footer-nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 5px;
+    }
+
+    .footer-link {
+        text-decoration: none;
+        color: #6b7280;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+        color: #111827;
+    }
+
+    .separator {
+        color: #e5e7eb;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .footer-meta {
+            align-items: center;
+        }
+
+        .footer-nav {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0;
+        }
+    }
 
 /* =========================================
    8. MOBIEL (Responsive)

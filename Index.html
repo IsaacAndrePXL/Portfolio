@@ -33,9 +33,19 @@
             <h1 class="hero-title">Isaac André</h1>
             <h2 class="hero-subtitle">Creativity through clean design.</h2>
             <p class="hero-bio">Ik ben een gemotiveerde, rustige en creatieve student die leergierig experimenteert met kleuren, vormen en digitale media. Nieuwsgierig naar design en coding.</p>
-            <a href="#contact" class="btn-primary">Contacteer mij</a>
-            <a href="#overmij" class="btn-primary2">Meer over mij</a>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Contacteer mij</a>
+                <a href="#overmij" class="btn-primary2">Meer over mij</a>
+            </div>
         </div>
+
+        <a href="#overmij" class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </a>
     </section>
 
     <section id="overmij" class="section-content2">
@@ -93,9 +103,9 @@
 
             <div class="projects-grid">
 
-                <a href="projecten/dishdash/Homepage.html" class="project-card">
+                <a href="projecten/dishdash/Homepage.html" class="project-card web">
                     <div class="card-image-wrapper">
-                        <div class="card-image" style="background-color: #f3f4f6;"></div>
+                        <img src="mockup/mockupdishdash.png" alt="TakeAway Website Design" class="card-image">
                     </div>
                     <div class="card-content">
                         <span class="card-category">SCHOOLPROJECT - SCRIPTING</span>
@@ -110,9 +120,10 @@
                     </div>
                 </a>
 
-                <a href="projecten/festival/Festivals.html" class="project-card"> <div class="card-image-wrapper">
-                    <div class="card-image" style="background-color: #f3f4f6;"></div>
-                </div>
+                <a href="projecten/festival/Festivals.html" class="project-card web">
+                    <div class="card-image-wrapper">
+                        <img src="mockup/mockupfestival.png" alt="Festival Website Design" class="card-image">
+                    </div>
                     <div class="card-content">
                         <span class="card-category">SCHOOLPROJECT - SCRIPTING</span>
                         <h3>Interactieve Website</h3>
@@ -125,42 +136,37 @@
                     </div>
                 </a>
 
-                <article class="project-card">
-                    <a href="projecten/visuals/design.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
-                        <div class="card-image-wrapper">
-                            <div class="card-image" style="background-color: #f3f4f6;"></div>
+                <a href="projecten/visuals/design.html" class="project-card web"> <div class="card-image-wrapper">
+                    <img src="mockup/mockupvisuals.png" alt="Posters en Visuals" class="card-image">
+                </div>
+                    <div class="card-content">
+                        <span class="card-category">SCHOOLPROJECT - DESIGN</span>
+                        <h3>Posters & Visuals</h3>
+                        <p>Collectie van posters ontworpen in Photoshop en Figma. Focus op kleurgebruik, typografie en sterke visuele compositie.</p>
+                        <div class="tags">
+                            <span class="tag">Photoshop</span>
+                            <span class="tag">Illustrator</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Graphic Design</span>
                         </div>
-                        <div class="card-content">
-                            <span class="card-category">SCHOOLPROJECT - DESIGN</span>
-                            <h3>Posters & Visuals</h3>
-                            <p>Collectie van posters ontworpen in Photoshop en Figma. Focus op kleurgebruik, typografie en sterke visuele compositie.</p>
-                            <div class="tags">
-                                <span class="tag">Photoshop</span>
-                                <span class="tag">Illustrator</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">Graphic Design</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+                    </div>
+                </a>
 
-                <article class="project-card">
-                    <a href="projecten/Bakkerij/index.html" style="text-decoration: none; color: inherit; display: block; height: 100%;">
-                        <div class="card-image-wrapper">
-                            <div class="card-image" style="background-color: #f3f4f6;"></div>
+                <a href="projecten/Bakkerij/index.html" class="project-card web">
+                    <div class="card-image-wrapper">
+                        <img src="mockup/mockupbakkerij.png" alt="Bakkerij Website Design" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Website & Branding</span>
+                        <h3>Bakkerij Sven | Landen</h3>
+                        <p>Een sfeervolle website voor een lokale ambachtelijke bakkerij. Het ontwerp legt de nadruk op versheid en gezelligheid.</p>
+                        <div class="tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Design</span>
                         </div>
-                        <div class="card-content">
-                            <span class="card-category">PERSOONLIJK PROJECT</span>
-                            <h3>Creatieve Experimenten</h3>
-                            <p>Persoonlijke concept-ontwerpen en visuele experimenten. Vrije projecten om nieuwe technieken en stijlen te verkennen.</p>
-                            <div class="tags">
-                                <span class="tag">Figma</span>
-                                <span class="tag">Photoshop</span>
-                                <span class="tag">Exploration</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+                    </div>
+                </a>
 
             </div>
         </div>
@@ -347,7 +353,21 @@
 
 <footer>
     <div class="container">
-        <p style="font-size: 0.875rem; color: #9ca3af; text-align: center;">© 2025 Isaac André. Alle rechten voorbehouden.</p>
+        <div class="footer-content">
+
+            <div class="footer-meta">
+                <span class="footer-brand">Isaac André</span>
+                <p class="footer-tagline">"Creativity through clean design."</p>
+                <p class="copyright">© 2026 Alle rechten voorbehouden.</p>
+            </div>
+
+            <nav class="footer-nav">
+                <a href="https://github.com/IsaacAndrePXL" target="_blank" class="footer-link">GitHub</a>
+                <span class="separator">•</span>
+                <a href="privacy.html" class="footer-link">Privacyverklaring</a>
+            </nav>
+
+        </div>
     </div>
 </footer>
 <script src="script.js"></script>
