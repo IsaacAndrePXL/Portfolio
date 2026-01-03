@@ -2,20 +2,16 @@
 let menu = [];
 let huidigFilter = 'alles';
 let huidigeSortering = 'Standaard';
-let heroItem = null;
-let currentItem = null;
+let dagSchotel = null;
+let geselecteerdGerecht = null;
 
-// WACHT TOT PAGINA GELADEN IS
+// --- PAGINA INITIALISATIE ---
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Maak de modal HTML aan via Javascript
     maakModalAan();
-
-    // 2. Laad het menu
-    laadMenu().catch(error => console.error("Fout bij laden:", error));
+    laadMenu().catch(fout => console.error("Fout bij laden:", fout));
 });
 
-// --- STAP 1: MODAL HTML MAKEN ---
-
+// --- STAP 1: MODAL HTML OPBOUWEN ---
 function maakModalAan() {
     const modalDiv = document.createElement('div');
     modalDiv.id = 'optieModal';
@@ -35,34 +31,35 @@ function maakModalAan() {
 
     document.body.appendChild(modalDiv);
 
+    // Event listeners voor de modal
     const sluitKnop = document.getElementById('sluitModalBtn');
     if (sluitKnop) sluitKnop.addEventListener('click', sluitModal);
 
-    window.addEventListener('click', (event) => {
-        if (event.target === modalDiv) sluitModal();
+    window.addEventListener('click', (gebeurtenis) => {
+        if (gebeurtenis.target === modalDiv) sluitModal();
     });
 
     const bevestigKnop = document.getElementById('bevestigBtn');
     if (bevestigKnop) bevestigKnop.addEventListener('click', bevestigToevoegen);
 }
 
-// --- STAP 2: BASIS LOGICA (Menu Laden & Renderen) ---
-
+// --- STAP 2: MENU & DATA LADEN ---
 async function laadMenu() {
     try {
-        const response = await fetch('menu.json');
-        menu = await response.json();
-        renderMenu();
-        renderHero();
-    } catch (error) {
-        console.error('Fout bij laden menu:', error);
+        const antwoord = await fetch('menu.json');
+        menu = await antwoord.json();
+        toonMenu();
+        toonDagSchotel();
+    } catch (fout) {
+        console.error('Fout bij laden menu:', fout);
     }
 }
 
-const filterButtons = document.querySelectorAll('.filter-button');
-for (const btn of filterButtons) {
-    btn.addEventListener('click', function() {
-        for (const b of filterButtons) {
+// --- FILTER & SORTEER LOGICA ---
+const filterKnoppen = document.querySelectorAll('.filter-button');
+for (const knop of filterKnoppen) {
+    knop.addEventListener('click', function() {
+        for (const b of filterKnoppen) {
             b.classList.remove('active');
         }
         this.classList.add('active');
@@ -72,58 +69,59 @@ for (const btn of filterButtons) {
         else if (tekst.includes('Vegetarisch')) huidigFilter = 'veggie';
         else huidigFilter = 'vlees';
 
-        renderMenu();
+        toonMenu();
     });
 }
 
-const sortSelect = document.getElementById('sort-select');
-if (sortSelect) {
-    sortSelect.addEventListener('change', () => {
-        huidigeSortering = sortSelect.value;
-        renderMenu();
+const sorteerLijst = document.getElementById('sort-select');
+if (sorteerLijst) {
+    sorteerLijst.addEventListener('change', () => {
+        huidigeSortering = sorteerLijst.value;
+        toonMenu();
     });
 }
 
-function renderMenu() {
-    const grids = document.querySelectorAll('.menu-grid');
-    for (const grid of grids) {
-        grid.innerHTML = '';
+function toonMenu() {
+    // Wis oude inhoud
+    const roosters = document.querySelectorAll('.menu-grid');
+    for (const rooster of roosters) {
+        rooster.innerHTML = '';
     }
 
-    // 1. Filteren
-    /** @type {MenuItem[]} */
+    // Filteren
     let gefilterdMenu = [];
-    for (const item of menu) {
+    for (const gerecht of menu) {
         if (huidigFilter === 'alles') {
-            gefilterdMenu.push(item);
-        } else if (huidigFilter === 'veggie' && item.veggie === true) {
-            gefilterdMenu.push(item);
-        } else if (huidigFilter === 'vlees' && item.veggie === false) {
-            gefilterdMenu.push(item);
+            gefilterdMenu.push(gerecht);
+        } else if (huidigFilter === 'veggie' && gerecht.veggie === true) {
+            gefilterdMenu.push(gerecht);
+        } else if (huidigFilter === 'vlees' && gerecht.veggie === false) {
+            gefilterdMenu.push(gerecht);
         }
     }
 
-    // 2. Sorteren
+    // Sorteren
     if (huidigeSortering === 'Prijs oplopend') {
         gefilterdMenu.sort((a, b) => a.price - b.price);
     } else if (huidigeSortering === 'Prijs aflopend') {
         gefilterdMenu.sort((a, b) => b.price - a.price);
     }
 
-    const totalItems = document.getElementById('total-items');
-    if (totalItems) totalItems.textContent = `${gefilterdMenu.length} gerechten`;
+    // Update teller
+    const totaalItemsVeld = document.getElementById('total-items');
+    if (totaalItemsVeld) totaalItemsVeld.textContent = `${gefilterdMenu.length} gerechten`;
 
-    // 3. Renderen
-    for (const item of gefilterdMenu) {
-        const categoryId = item.category.toLowerCase();
-        const grid = document.getElementById(categoryId);
+    // Renderen naar HTML
+    for (const gerecht of gefilterdMenu) {
+        const categorieId = gerecht.category.toLowerCase();
+        const rooster = document.getElementById(categorieId);
 
-        if (grid) {
-            const card = document.createElement('div');
-            card.className = 'dish-card';
+        if (rooster) {
+            const kaart = document.createElement('div');
+            kaart.className = 'dish-card';
 
             let veggieHtml = '';
-            if (item.veggie) {
+            if (gerecht.veggie) {
                 veggieHtml = `<span class="veggie-label"><svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                      width="16" height="16"
                      fill="none" stroke="currentColor" stroke-width="2"
@@ -134,100 +132,96 @@ function renderMenu() {
             }
 
             let tagsHtml = '';
-            if (item.tags) {
-                for (const tag of item.tags) {
+            if (gerecht.tags) {
+                for (const tag of gerecht.tags) {
                     tagsHtml += `<span class="dish-tag">${tag}</span>`;
                 }
             }
 
-            card.innerHTML = `
+            kaart.innerHTML = `
                 <div class="dish-image">
-                    <img src="${item.image}" alt="${item.name}">
+                    <img src="${gerecht.image}" alt="${gerecht.name}">
                     ${veggieHtml}
                 </div>
                 <div class="dish-content">
                     <div class="dish-header">
-                        <h3>${item.name}</h3>
-                        <span class="dish-price">€${item.price.toFixed(2)}</span>
+                        <h3>${gerecht.name}</h3>
+                        <span class="dish-price">€${gerecht.price.toFixed(2)}</span>
                     </div>
-                    <p class="dish-ingredients">${item.ingredients.join(', ')}</p>
+                    <p class="dish-ingredients">${gerecht.ingredients.join(', ')}</p>
                     <div class="dish-tags">${tagsHtml}</div>
                     <br>
                     <button class="btn-add">+ Toevoegen</button>
                 </div>
             `;
 
-            grid.appendChild(card);
+            rooster.appendChild(kaart);
 
-            const knop = card.querySelector('.btn-add');
+            const knop = kaart.querySelector('.btn-add');
             if (knop) {
                 knop.addEventListener('click', () => {
-                    openModal(item);
+                    openOptieModal(gerecht);
                 });
             }
         }
     }
 }
 
-function renderHero() {
-    if (!heroItem && menu.length > 0) {
-        const randomIndex = Math.floor(Math.random() * menu.length);
-        heroItem = menu[randomIndex];
+// --- HERO / DAGSCHOTEL LOGICA ---
+function toonDagSchotel() {
+    if (!dagSchotel && menu.length > 0) {
+        const willekeurigeIndex = Math.floor(Math.random() * menu.length);
+        dagSchotel = menu[willekeurigeIndex];
     }
 
-    if (heroItem) {
+    if (dagSchotel) {
         const img = document.getElementById('hero-image');
-        if(img) img.src = heroItem.image;
+        if(img) img.src = dagSchotel.image;
 
-        const name = document.getElementById('hero-name');
-        if(name) name.textContent = heroItem.name;
+        const naam = document.getElementById('hero-name');
+        if(naam) naam.textContent = dagSchotel.name;
 
-        const ingr = document.getElementById('hero-ingredients');
-        if(ingr) ingr.textContent = heroItem.ingredients.join(', ');
+        const ingredienten = document.getElementById('hero-ingredients');
+        if(ingredienten) ingredienten.textContent = dagSchotel.ingredients.join(', ');
 
-        const price = document.getElementById('hero-price');
-        if(price) price.textContent = `€${heroItem.price.toFixed(2)}`;
+        const prijs = document.getElementById('hero-price');
+        if(prijs) prijs.textContent = `€${dagSchotel.price.toFixed(2)}`;
 
-        // Tags voor hero
         const tagsContainer = document.getElementById('hero-tags');
         if (tagsContainer) {
             tagsContainer.innerHTML = '';
-            if (heroItem.veggie) {
+            if (dagSchotel.veggie) {
                 tagsContainer.innerHTML += `<span class="veggie-tag">🌱 Vegetarisch</span>`;
             }
-            for (const tag of heroItem.tags) {
+            for (const tag of dagSchotel.tags) {
                 tagsContainer.innerHTML += `<span class="tag">${tag}</span>`;
             }
         }
 
-        const heroBtn = document.getElementById('hero-add');
-        if (heroBtn) {
-            heroBtn.onclick = () => openModal(heroItem);
+        const heroKnop = document.getElementById('hero-add');
+        if (heroKnop) {
+            heroKnop.onclick = () => openOptieModal(dagSchotel);
         }
     }
 }
 
-// --- STAP 3: MODAL LOGICA ---
-
-/**
- * @param {MenuItem} item
- */
-function openModal(item) {
-    if (!item) return;
-    currentItem = item;
+// --- STAP 3: MODAL FUNCTIONALITEIT ---
+function openOptieModal(gerecht) {
+    if (!gerecht) return;
+    geselecteerdGerecht = gerecht;
 
     const modal = document.getElementById('optieModal');
     const titel = document.getElementById('modalTitel');
     const optiesContainer = document.getElementById('modalOpties');
 
-    if (titel) titel.textContent = item.name;
+    if (titel) titel.textContent = gerecht.name;
     if (optiesContainer) optiesContainer.innerHTML = '';
 
-    updateModalPrijs();
+    herberekenModalPrijs();
 
-    if (item.options && item.options.length > 0) {
-        for (let i = 0; i < item.options.length; i++) {
-            const optie = item.options[i];
+    if (gerecht.options && gerecht.options.length > 0) {
+        for (let i = 0; i < gerecht.options.length; i++) {
+            const optie = gerecht.options[i];
 
             const rij = document.createElement('div');
             rij.className = 'dishdash-option-row';
@@ -251,8 +245,8 @@ function openModal(item) {
         }
 
         const checkboxes = document.querySelectorAll('.optie-checkbox');
-        for (const box of checkboxes) {
-            box.addEventListener('change', updateModalPrijs);
+        for (const vakje of checkboxes) {
+            vakje.addEventListener('change', herberekenModalPrijs);
         }
 
     } else {
@@ -267,17 +261,15 @@ function sluitModal() {
     if (modal) modal.classList.remove('zichtbaar');
 }
 
-function updateModalPrijs() {
-    if (!currentItem) return;
-    let totaal = currentItem.price;
+function herberekenModalPrijs() {
+    if (!geselecteerdGerecht) return;
+    let totaal = geselecteerdGerecht.price;
 
     const checkboxes = document.querySelectorAll('.optie-checkbox');
-    for (const box of checkboxes) {
-        // @ts-ignore
-        if (box.checked) {
-            const index = box.getAttribute('data-index');
-            // @ts-ignore
-            const optie = currentItem.options[index];
+    for (const vakje of checkboxes) {
+        if (vakje.checked) {
+            const index = vakje.getAttribute('data-index');
+            const optie = geselecteerdGerecht.options[index];
             totaal = totaal + optie.price;
         }
     }
@@ -287,38 +279,28 @@ function updateModalPrijs() {
 }
 
 function bevestigToevoegen() {
-    if (!currentItem) return;
-    /** @type {MenuOptie[]} */
-    let geselecteerdeOpties = [];
+    if (!geselecteerdGerecht) return;
+    let gekozenOpties = [];
     let extraKosten = 0;
 
     const checkboxes = document.querySelectorAll('.optie-checkbox');
-    for (const box of checkboxes) {
-        // @ts-ignore
-        if (box.checked) {
-            const index = box.getAttribute('data-index');
-            // @ts-ignore
-            const optie = currentItem.options[index];
+    for (const vakje of checkboxes) {
+        if (vakje.checked) {
+            const index = vakje.getAttribute('data-index');
+            const optie = geselecteerdGerecht.options[index];
 
-            geselecteerdeOpties.push(optie);
+            gekozenOpties.push(optie);
             extraKosten += optie.price;
         }
     }
 
-    addToCart(currentItem, geselecteerdeOpties, extraKosten);
+    voegToeAanWinkelwagen(geselecteerdGerecht, gekozenOpties, extraKosten);
     sluitModal();
 }
 
-// --- STAP 4: WINKELWAGEN LOGICA ---
-
-/**
- * @param {MenuItem} item
- * @param {MenuOptie[]} opties
- * @param {number} extraPrijs
- */
-function addToCart(item, opties, extraPrijs) {
-    /** @type {CartItem[]} */
-    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+// --- STAP 4: WINKELWAGEN ACTIES ---
+function voegToeAanWinkelwagen(gerecht, opties, extraPrijs) {
+    let winkelwagen = JSON.parse(localStorage.getItem('cart') || '[]');
 
     let optieNamen = [];
     for (const opt of opties) {
@@ -326,20 +308,18 @@ function addToCart(item, opties, extraPrijs) {
     }
     optieNamen.sort();
 
-    const uniekCartId = item.id + '-' + optieNamen.join('-');
-
-    /** @type {CartItem|undefined} */
+    const uniekWinkelwagenId = gerecht.id + '-' + optieNamen.join('-');
     let bestaandItem = undefined;
 
-    for (const cartItem of cart) {
-        if (cartItem.cartId === uniekCartId) {
-            bestaandItem = cartItem;
+    for (const item of winkelwagen) {
+        if (item.cartId === uniekWinkelwagenId) {
+            bestaandItem = item;
             break;
         }
     }
 
     if (bestaandItem) {
-        const max = item.maxPerOrder || 99;
+        const max = gerecht.maxPerOrder || 99;
         if (bestaandItem.quantity >= max) {
             alert('Je hebt het maximum aantal voor dit gerecht bereikt.');
             return;
@@ -347,19 +327,19 @@ function addToCart(item, opties, extraPrijs) {
         bestaandItem.quantity++;
     } else {
         const nieuwItem = {
-            cartId: uniekCartId,
-            id: item.id,
-            name: item.name,
-            basePrice: item.price,
-            totalPricePerUnit: item.price + extraPrijs,
+            cartId: uniekWinkelwagenId,
+            id: gerecht.id,
+            name: gerecht.name,
+            basePrice: gerecht.price,
+            totalPricePerUnit: gerecht.price + extraPrijs,
             quantity: 1,
-            image: item.image,
-            maxPerOrder: item.maxPerOrder || 99,
+            image: gerecht.image,
+            maxPerOrder: gerecht.maxPerOrder || 99,
             selectedOptions: opties
         };
-        cart.push(nieuwItem);
+        winkelwagen.push(nieuwItem);
     }
 
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${item.name} toegevoegd aan winkelmand!`);
+    localStorage.setItem('cart', JSON.stringify(winkelwagen));
+    alert(`${gerecht.name} toegevoegd aan winkelmand!`);
 }

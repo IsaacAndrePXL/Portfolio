@@ -1,3 +1,4 @@
+// --- CONFIGURATIE ---
 let kortingscodes = [
     { code: "VEGGIE10", korting: 10 },
     { code: "WELCOME5", korting: 5 }
@@ -5,59 +6,58 @@ let kortingscodes = [
 
 let gebruikteKorting = 0;
 
+// --- PAGINA INITIALISATIE ---
 document.addEventListener("DOMContentLoaded", () => {
-    renderCart();
+    toonWinkelwagen();
 });
 
-// Kortingscode toepassen
-const applyBtn = document.getElementById("applyCoupon");
-if (applyBtn) {
-    applyBtn.addEventListener("click", () => {
-        const input = document.getElementById("couponInput").value.trim();
-        const message = document.getElementById("couponMessage");
+// --- KORTINGSCODE LOGICA ---
+const kortingKnop = document.getElementById("applyCoupon");
+if (kortingKnop) {
+    kortingKnop.addEventListener("click", () => {
+        const invoerVeld = document.getElementById("couponInput");
+        const berichtVeld = document.getElementById("couponMessage");
+        const code = invoerVeld.value.trim();
 
-        // Zoeken met een loop ipv .find
         let gevondenCode = null;
         for (const codeObj of kortingscodes) {
-            if (codeObj.code === input) {
+            if (codeObj.code === code) {
                 gevondenCode = codeObj;
                 break;
             }
         }
 
         if (!gevondenCode) {
-            message.textContent = "Ongeldige kortingscode";
-            message.style.color = "red";
+            berichtVeld.textContent = "Ongeldige kortingscode";
+            berichtVeld.style.color = "red";
             return;
         }
 
         gebruikteKorting = gevondenCode.korting;
-        message.textContent = `Kortingscode toegepast: €${gebruikteKorting} korting`;
-        message.style.color = "green";
+        berichtVeld.textContent = `Kortingscode toegepast: €${gebruikteKorting} korting`;
+        berichtVeld.style.color = "green";
 
-        renderCart();
+        toonWinkelwagen();
     });
 }
 
-function renderCart() {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-        cart = [];
+// --- WINKELWAGEN WEERGAVE ---
+function toonWinkelwagen() {
+    let winkelwagen = JSON.parse(localStorage.getItem("cart"));
+    if (!winkelwagen) {
+        winkelwagen = [];
     }
 
-    const cartContainer = document.getElementById("cartItems");
-    cartContainer.innerHTML = ""; // Leegmaken
+    const container = document.getElementById("cartItems");
+    container.innerHTML = "";
 
     let subtotaal = 0;
 
-    // Loop door winkelmand items (PDF: Itereren over arrays)
-    for (const item of cart) {
-
-        // Regelprijs berekenen
+    for (const item of winkelwagen) {
         const regelPrijs = item.totalPricePerUnit * item.quantity;
         subtotaal = subtotaal + regelPrijs;
 
-        // Opties weergeven als lijstje
+        // Opties (extra's) weergeven
         let optiesHtml = "";
         if (item.selectedOptions && item.selectedOptions.length > 0) {
             optiesHtml = `<ul style="font-size: 0.85rem; color: #777; list-style: none; padding-left: 0; margin-top:4px;">`;
@@ -75,7 +75,6 @@ function renderCart() {
         const itemDiv = document.createElement("div");
         itemDiv.className = "cart-item";
 
-        // We gebruiken data-cart-id om straks te weten op welk item we klikken
         itemDiv.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
             <div class="cart-item-details">
@@ -84,18 +83,18 @@ function renderCart() {
                 <span style="font-weight:bold; color:#c34322;">€${item.totalPricePerUnit.toFixed(2)} p/st</span>
                 
                 <div class="cart-actions">
-                    <button class="qty-btn" data-cart-id="${item.cartId}" data-action="minus">−</button>
+                    <button class="qty-btn" data-cart-id="${item.cartId}" data-actie="min">−</button>
                     <span class="qty">${item.quantity}</span>
-                    <button class="qty-btn" data-cart-id="${item.cartId}" data-action="plus">+</button>
+                    <button class="qty-btn" data-cart-id="${item.cartId}" data-actie="plus">+</button>
                     <button class="remove-btn" data-cart-id="${item.cartId}">✕</button>
                 </div>
             </div>
         `;
 
-        cartContainer.appendChild(itemDiv);
+        container.appendChild(itemDiv);
     }
 
-    // Totalen berekenen
+    // Eindtotaal berekening
     let eindTotaal = subtotaal - gebruikteKorting;
     if (eindTotaal < 0) eindTotaal = 0;
 
@@ -104,86 +103,79 @@ function renderCart() {
     document.getElementById("eindTotaal").textContent = `€${eindTotaal.toFixed(2)}`;
 }
 
-// Global Click Event voor de knoppen (Event Delegation)
-document.addEventListener("click", function (e) {
-    // Check of we op een plus/min of verwijder knop hebben geklikt
-    const isQtyBtn = e.target.classList.contains("qty-btn");
-    const isRemoveBtn = e.target.classList.contains("remove-btn");
+// --- KNOPPEN EVENTS (AANTAL AANPASSEN / VERWIJDEREN) ---
+document.addEventListener("click", function (gebeurtenis) {
+    const doel = gebeurtenis.target;
+    const isAantalKnop = doel.classList.contains("qty-btn");
+    const isVerwijderKnop = doel.classList.contains("remove-btn");
 
-    if (isQtyBtn || isRemoveBtn) {
-        const cartId = e.target.getAttribute("data-cart-id");
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (isAantalKnop || isVerwijderKnop) {
+        const cartId = doel.getAttribute("data-cart-id");
+        let winkelwagen = JSON.parse(localStorage.getItem("cart")) || [];
 
-        // Zoek de index van het item met een loop (geen .findIndex)
         let itemIndex = -1;
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].cartId === cartId) {
+        for (let i = 0; i < winkelwagen.length; i++) {
+            if (winkelwagen[i].cartId === cartId) {
                 itemIndex = i;
                 break;
             }
         }
 
-        // Als item gevonden is
         if (itemIndex !== -1) {
-            const item = cart[itemIndex];
+            const item = winkelwagen[itemIndex];
 
-            if (isRemoveBtn) {
-                // Verwijderen met splice (PDF p. 66)
-                cart.splice(itemIndex, 1);
+            if (isVerwijderKnop) {
+                winkelwagen.splice(itemIndex, 1);
             }
-            else if (isQtyBtn) {
-                const action = e.target.getAttribute("data-action");
+            else if (isAantalKnop) {
+                const actie = doel.getAttribute("data-actie");
 
-                if (action === "plus") {
+                if (actie === "plus") {
                     if (item.quantity < item.maxPerOrder) {
                         item.quantity++;
                     } else {
                         alert("Max aantal bereikt.");
                     }
                 }
-                else if (action === "minus") {
+                else if (actie === "min") {
                     item.quantity--;
                     if (item.quantity <= 0) {
-                        // Verwijder als aantal 0 is
-                        cart.splice(itemIndex, 1);
+                        winkelwagen.splice(itemIndex, 1);
                     }
                 }
             }
 
-            localStorage.setItem("cart", JSON.stringify(cart));
-            renderCart();
+            localStorage.setItem("cart", JSON.stringify(winkelwagen));
+            toonWinkelwagen();
         }
     }
 });
 
-// Leeg mandje knop
-const clearBtn = document.getElementById("clearCart");
-if (clearBtn) {
-    clearBtn.addEventListener("click", () => {
+// --- OVERIGE KNOPPEN (LEEGMAKEN / BESTELLEN) ---
+const leegmaakKnop = document.getElementById("clearCart");
+if (leegmaakKnop) {
+    leegmaakKnop.addEventListener("click", () => {
         if (confirm("Weet je zeker dat je het mandje wilt leegmaken?")) {
             localStorage.removeItem("cart");
             gebruikteKorting = 0;
 
-            // Reset bericht
-            const msg = document.getElementById("couponMessage");
-            if(msg) msg.textContent = "";
+            const bericht = document.getElementById("couponMessage");
+            if(bericht) bericht.textContent = "";
 
-            renderCart();
+            toonWinkelwagen();
         }
     });
 }
 
-// Bestellen knop
-const orderBtn = document.getElementById("placeOrder");
-if (orderBtn) {
-    orderBtn.addEventListener("click", () => {
-        const cart = JSON.parse(localStorage.getItem("cart"));
-        // Checken of array leeg is via .length (PDF)
-        if (cart && cart.length > 0) {
+const bestelKnop = document.getElementById("placeOrder");
+if (bestelKnop) {
+    bestelKnop.addEventListener("click", () => {
+        const winkelwagen = JSON.parse(localStorage.getItem("cart"));
+        if (winkelwagen && winkelwagen.length > 0) {
             alert("Bedankt voor je bestelling!");
             localStorage.removeItem("cart");
             gebruikteKorting = 0;
-            renderCart();
+            toonWinkelwagen();
         } else {
             alert("Je winkelmandje is nog leeg.");
         }
