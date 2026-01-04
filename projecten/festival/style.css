@@ -1,5 +1,5 @@
 /* --- FONTS & VARIABELEN --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
 
 :root {
     --bg-color: #121212;
@@ -8,6 +8,7 @@
     --text-muted: #a0a0a0;
     --accent: #ff0055;
     --accent-hover: #ff3377;
+    --border-color: #333;
 }
 
 /* --- BASIS INSTELLINGEN --- */
@@ -72,7 +73,7 @@ h1 {
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 500;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
@@ -89,7 +90,7 @@ h1 {
     align-items: center;
     gap: 50px;
     padding: 80px 0;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .festival-row.reverse {
@@ -139,6 +140,7 @@ img:hover {
     transform: scale(1.02);
 }
 
+/* --- BUTTONS & LINKS --- */
 .btn-back {
     display: inline-block;
     font-size: 0.85rem;
@@ -153,46 +155,6 @@ img:hover {
     color: var(--accent);
 }
 
-/* --- FOOTER --- */
-footer .copyright {
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-main);
-    margin-bottom: 10px;
-}
-
-footer .disclaimer {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.5;
-    opacity: 0.8;
-}
-
-footer .disclaimer strong {
-    color: var(--text-main);
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .festival-row, .festival-row.reverse {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 50px 0;
-    }
-
-    .img-col {
-        order: -1;
-        width: 100%;
-    }
-}
-
-/* Universal Back Button Styles */
 .universal-back-btn {
     position: fixed;
     top: 20px;
@@ -200,24 +162,25 @@ footer .disclaimer strong {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #ffffff;
-    color: #111827;
+    background-color: var(--card-bg);
+    color: var(--text-main);
     padding: 10px 20px;
     border-radius: 9999px;
     text-decoration: none;
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 500;
     font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid var(--border-color);
     z-index: 99999;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
 }
 
 .universal-back-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    background-color: #f9fafb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background-color: var(--accent);
+    border-color: var(--accent);
 }
 
 .universal-back-btn svg {
@@ -226,13 +189,83 @@ footer .disclaimer strong {
     stroke: currentColor;
 }
 
-@media (max-width: 600px) {
-    .universal-back-btn {
-        top: 15px;
-        left: 15px;
-        padding: 8px 16px;
-        font-size: 0.85rem;
-    }
+/* --- FOOTER --- */
+footer {
+    padding: 4rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    text-align: center;
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+footer .copyright {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+footer .disclaimer {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 540px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+footer .disclaimer a {
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+footer .disclaimer a:hover {
+    color: var(--text-main);
+}
+
+footer .disclaimer strong {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.footer-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent);
 }
 
 /* --- ANIMATIE CLASSES --- */
@@ -247,4 +280,44 @@ footer .disclaimer strong {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
+}
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Layout aanpassingen */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .festival-row,
+    .festival-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .img-col {
+        order: -1;
+        width: 100%;
+    }
+
+    footer {
+        padding: 3rem 1.5rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .universal-back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }

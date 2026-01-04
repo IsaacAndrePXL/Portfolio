@@ -1,7 +1,8 @@
 // --- CONFIGURATIE ---
 let kortingscodes = [
     { code: "VEGGIE10", korting: 10 },
-    { code: "WELCOME5", korting: 5 }
+    { code: "WELCOME5", korting: 5 },
+    { code: "GRATIS", korting: 999999 }
 ];
 
 let gebruikteKorting = 0;
@@ -11,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toonWinkelwagen();
 });
 
-// --- KORTINGSCODE LOGICA ---
 const kortingKnop = document.getElementById("applyCoupon");
 if (kortingKnop) {
     kortingKnop.addEventListener("click", () => {
@@ -33,8 +33,15 @@ if (kortingKnop) {
             return;
         }
 
-        gebruikteKorting = gevondenCode.korting;
-        berichtVeld.textContent = `Kortingscode toegepast: €${gebruikteKorting} korting`;
+        if (gevondenCode.code === "GRATIS") {
+            alert("Leuk geprobeerd! 😉 Maar zo rijk zijn we helaas niet.\n\nHier is €1 symbolische korting voor de moeite!");
+            gebruikteKorting = 1;
+            berichtVeld.textContent = "Troostprijs toegepast: €1.00 korting";
+        } else {
+            gebruikteKorting = gevondenCode.korting;
+            berichtVeld.textContent = `Kortingscode toegepast: €${gebruikteKorting} korting`;
+        }
+
         berichtVeld.style.color = "green";
 
         toonWinkelwagen();

@@ -8,7 +8,7 @@ let geselecteerdGerecht = null;
 // --- PAGINA INITIALISATIE ---
 document.addEventListener('DOMContentLoaded', () => {
     maakModalAan();
-    laadMenu().catch(fout => console.error("Fout bij laden:", fout));
+    laadMenu().catch(fout => console.error("Oepsie, het wilt eventjes niet mee werken.", fout));
 });
 
 // --- STAP 1: MODAL HTML OPBOUWEN ---
@@ -319,7 +319,7 @@ function voegToeAanWinkelwagen(gerecht, opties, extraPrijs) {
     }
 
     if (bestaandItem) {
-        const max = gerecht.maxPerOrder || 99;
+        const max = gerecht.maxPerOrder || 69;
         if (bestaandItem.quantity >= max) {
             alert('Je hebt het maximum aantal voor dit gerecht bereikt.');
             return;
@@ -334,7 +334,7 @@ function voegToeAanWinkelwagen(gerecht, opties, extraPrijs) {
             totalPricePerUnit: gerecht.price + extraPrijs,
             quantity: 1,
             image: gerecht.image,
-            maxPerOrder: gerecht.maxPerOrder || 99,
+            maxPerOrder: gerecht.maxPerOrder || 69,
             selectedOptions: opties
         };
         winkelwagen.push(nieuwItem);
@@ -342,4 +342,43 @@ function voegToeAanWinkelwagen(gerecht, opties, extraPrijs) {
 
     localStorage.setItem('cart', JSON.stringify(winkelwagen));
     alert(`${gerecht.name} toegevoegd aan winkelmand!`);
+}
+
+// --- EASTER EGG: HONGER MODUS ---
+let ingevoerdeToetsen = '';
+const geheimeCode = 'honger';
+
+document.addEventListener('keydown', (e) => {
+    // Voeg de laatst ingedrukte toets toe aan de string
+    ingevoerdeToetsen += e.key.toLowerCase();
+
+    // Houd de string kort (niet langer dan het geheime woord) om geheugen te besparen
+    if (ingevoerdeToetsen.length > geheimeCode.length) {
+        ingevoerdeToetsen = ingevoerdeToetsen.slice(-geheimeCode.length);
+    }
+
+    // Check of het geheime woord is getypt
+    if (ingevoerdeToetsen === geheimeCode) {
+        activeerHongerModus();
+    }
+});
+
+function activeerHongerModus() {
+    alert("🍕 WOAAH! JE HEBT HONGER! 🍕\n\nLet's gooo! Tijd voor pizza!");
+
+    // Verander de achtergrond en tekstkleur voor een party-effect
+    document.body.style.backgroundColor = '#ffeaa7'; // Gele 'kaas' kleur
+    document.body.style.transition = 'background 1s ease';
+
+    // Draai het logo eenmalig rond
+    const logo = document.querySelector('.logo-box');
+    if (logo) {
+        logo.style.transition = 'transform 1s ease';
+        logo.style.transform = 'rotate(360deg) scale(1.5)';
+
+        // Reset het logo na 1 seconde
+        setTimeout(() => {
+            logo.style.transform = '';
+        }, 1000);
+    }
 }

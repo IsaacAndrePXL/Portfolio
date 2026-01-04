@@ -53,6 +53,9 @@ De volgende onderdelen zijn succesvol geïmplementeerd:
 - **Kortingscodes:**
     - Werkende codes: `VEGGIE10` (€10 korting) en `WELCOME5` (€5 korting).
     - Validatie: Foutmelding bij onbestaande code.
+- **Easter Eggs:**
+    - **Homepage:** Typ het woord "honger" op je toetsenbord voor een visuele verrassing (Party Modus).
+    - **Checkout:** Er is een verborgen code (`GRATIS`) die een grappige melding geeft en een symbolische 'troostprijs' toekent.
 
 ## Bekende Beperkingen / Wat is niet gelukt
 
