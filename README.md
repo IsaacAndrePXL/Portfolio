@@ -1,4 +1,4 @@
-# 👨‍💻 Isaac Andre Portfolio
+# Isaac Andre Portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9f5ac2dd-afae-4cf9-8dcc-d3dd4001b802/deploy-status)](https://app.netlify.com/projects/isaacandredvoportfolio/deploys)
 
