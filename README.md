@@ -1,68 +1,90 @@
-# Isaac Andre Portfolio
+# Portfolio Isaac Andre
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9f5ac2dd-afae-4cf9-8dcc-d3dd4001b802/deploy-status)](https://app.netlify.com/projects/isaacandredvoportfolio/deploys)
 
-Welkom bij de repository van mijn persoonlijke portfolio website. Deze website dient als centraal punt om mijn vaardigheden, projecten en ervaring als digitale vormgever te presenteren.
+Dit is de officiële repository voor de eindopdracht van **Web Development (WPL1)**. Op deze website presenteer ik mijn werk, vaardigheden en projecten als digitale vormgever/programmeur.
 
-**Live Demo:** [https://isaacandredvoportfolio.netlify.app/](https://isaacandredvoportfolio.netlify.app/)
+**🚀 Bekijk de live website hier:** [https://isaacandredvoportfolio.netlify.app/](https://isaacandredvoportfolio.netlify.app/)
 
-## Over dit project
+---
 
-Dit project is een responsieve portfolio website ontworpen om mijn werk als digitale vormgever te tonen. De site bevat informatie over wie ik ben, een overzicht van mijn technische vaardigheden en links naar mijn recente projecten.
+## 📝 Over het Portfolio
 
-### Belangrijkste secties:
-* **Home:** Introductie en korte bio.
-* **Over mij:** Achtergrondinformatie, opleiding (Informatiesystemen) en doelen.
-* **Projecten:** Showcase van recente websites en grafisch designs.
-* **Contact:** Mogelijkheden om contact met mij op te nemen.
+Conform de opdracht is deze website opgebouwd uit de volgende onderdelen:
 
-## Gebruikte Technologieën
+### 1. Korte voorstelling & Motivatie
+Op de website vind je een introductie over wie ik ben en waarom ik gekozen heb voor deze opleiding. Ook leg ik uit waarom ik mezelf zie als een geschikte designer/programmeur.
 
-Deze portfolio is gebouwd met een focus op moderne webstandaarden en prestaties.
+### 2. Projecten (School & Persoonlijk)
+Een overzicht van mijn werk, verdeeld in categorieën. Elk project bevat een beschrijving van de opdracht, mijn rol en de gebruikte technieken.
+* **DishDash:** Interactieve bestel-applicatie.
+* **Festival Website:** Promotionele website voor een evenement.
+* **Bakkerij:** Website voor lokale handel.
+* **Visuals & Design:** Een sectie met niet-schoolgerelateerde projecten (grafisch werk/wireframes).
 
-* **Frontend:** HTML5 & CSS3
-* **Taal:** JavaScript
-* **Hosting & Deployment:** Netlify
-* **Versiebeheer:** Git & GitHub
+### 3. Speciale Sectie
+Een uniek onderdeel ("Andere weetjes") waarin ik dieper inga op interesses buiten het standaard curriculum.
 
-## Installatie & Lokaal Gebruik
+---
 
-Wil je dit project lokaal op je machine draaien? Volg dan deze stappen:
+## 🛠 Technische Specificaties
+
+Er is strikt voldaan aan de technische vereisten:
+
+* **Talen:** 100% HTML5, CSS3 en Vanilla JavaScript.
+* **Geen Frameworks:** Er is **geen** gebruik gemaakt van Bootstrap, Tailwind, React of WordPress.
+* **Code Structuur:** Semantische HTML, CSS Flexbox/Grid en georganiseerde mappenstructuur.
+* **Versiebeheer:** Minimaal 5 commits via Git & GitHub.
+
+---
+
+## 📚 Bronnen & AI-Verantwoording
+
+Zoals vereist in de opdracht, volgt hieronder een transparante weergave van de gebruikte hulpmiddelen en AI-tools.
+
+### 🤖 Gebruik van AI-Tools
+Ik heb AI-tools ingezet als hulpmiddel, maar de uiteindelijke code en teksten zijn door mijzelf samengesteld en gecontroleerd.
+
+* **ChatGPT / Gemini:**
+    * Gebruikt voor het brainstormen over teksten ("Lorem Ipsum" vervanging).
+    * Gebruikt als naslagwerk voor specifieke CSS Grid problemen (i.p.v. Google zoeken).
+    * Hulp bij het debuggen van JavaScript fouten in de interactieve onderdelen.
+* **GitHub Copilot:**
+    * Gebruikt voor snellere code-autocompletion tijdens het typen van HTML-structuren.
+
+### 🔗 Externe Bronnen
+* **Afbeeldingen:** Unsplash, Pexels (Rechtenvrij).
+* **Lettertypes:** Google Fonts.
+* **Iconen:** FontAwesome / IonIcons.
+
+---
+
+## 💻 Installatie & Lokaal Gebruik
+
+Omdat dit project geen frameworks (zoals React/Vue) gebruikt, is er **geen** `npm install` nodig.
 
 1.  **Clone de repository:**
     ```bash
-    git clone [https://github.com/jouw-gebruikersnaam/jouw-repo-naam.git](https://github.com/jouw-gebruikersnaam/jouw-repo-naam.git)
-    cd jouw-repo-naam
+    git clone [https://github.com/PXL-GitHub-Naam/JouwRepoNaam.git](https://github.com/PXL-GitHub-Naam/JouwRepoNaam.git)
     ```
 
-2.  **Installeer de afhankelijkheden:**
-    ```bash
-    npm install
-    # of als je yarn gebruikt:
-    yarn install
-    ```
-
-3.  **Start de ontwikkelserver:**
-    ```bash
-    npm start
-    # of
-    yarn start
-    ```
-
-De website zal nu openen in je browser op `http://localhost:3000`.
+2.  **Starten:**
+    * Open de map in Visual Studio Code.
+    * Open `index.html`.
+    * Gebruik bij voorkeur de **Live Server** extensie voor de juiste werking van paden.
 
 ## 📁 Mappenstructuur
 
 ```text
 /root
-  ├── /mockup             # Imageholders
-  ├── /projecten          # De losse sub-sites
+  ├── /images             # Afbeeldingen map
+  ├── /projecten          # Sub-pagina's per project
   │     ├── /Bakkerij
-  │     ├── /dishdash     # Bevat menu.json, checkout logic, etc.
-  │     ├── /festival     # Festival pagina
-  │     └── /visuals      # Grafisch werk & Wireframes
-  ├── index.html          # Homepage
-  ├── portfolio.html      # Projecten overzicht
-  ├── privacy.html        # Privacy beleid
-  ├── style.css           # Global styles
-  └── script.js           # Global scripts
+  │     ├── /dishdash     
+  │     ├── /festival     
+  │     └── /visuals      
+  ├── index.html          # Hoofdpagina
+  ├── portfolio.html      # Projectoverzicht
+  ├── privacy.html        # Privacybeleid
+  ├── style.css           # CSS Stylesheet
+  └── script.js           # JavaScript bestand
