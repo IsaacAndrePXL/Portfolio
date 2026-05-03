@@ -1,409 +1,263 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaac André - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Isaac André</title>
+
+    <link rel="icon" type="image/png" href="pictures/favicon.ico" />
+    <link rel="apple-touch-icon" href="pictures/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <div class="header-content">
-        <a href="#" class="logo">Isaac André</a>
+<div id="cursor"></div>
 
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+<!-- NAV -->
+<nav id="navbar">
+    <a href="index.html" class="nav-logo">
+        <img src="pictures/LogoHero.png" alt="Isaac André" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+        <li><a href="#about">Over Mij</a></li>
+        <li><a href="#projects">Projecten</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <nav class="nav-links">
-            <a href="#overmij" class="nav-link">Over Mij</a>
-            <a href="#projecten" class="nav-link">Projecten</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#contact" class="btn-primary">Contact</a>
-        </nav>
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-media">
+        <div class="hero-media-placeholder"></div>
     </div>
-</header>
-<main>
-    <section class="hero">
-        <div class="container">
-            <span class="status-badge">Student Digitale Vormgeving - PXL</span>
-            <h1 class="hero-title">Isaac André</h1>
-            <h2 class="hero-subtitle">Creativity through clean design.</h2>
-            <p class="hero-bio">Ik ben een gemotiveerde, rustige en creatieve student die leergierig experimenteert met kleuren, vormen en digitale media. Nieuwsgierig naar design en coding.</p>
-
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Contacteer mij</a>
-                <a href="#overmij" class="btn-primary2">Meer over mij</a>
-            </div>
-        </div>
-
-        <a href="#overmij" class="scroll-indicator">
-            <span class="scroll-text">Scroll</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="hero-eyebrow reveal">Student Digitale Vormgeving · PXL Hasselt</p>
+        <h1 class="hero-name reveal reveal-delay-1">ISAAC<br>ANDRÉ</h1>
+        <p class="hero-title reveal reveal-delay-2">Creativity through clean design.</p>
+        <a href="#projects" class="btn-cta reveal reveal-delay-3">
+            <span>Bekijk Mijn Werk</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
-    </section>
-
-    <section id="overmij" class="section-content2">
-        <div class="container about-layout">
-            <div class="about-text">
-                <span class="section-tag-pill">Over Mij</span>
-                <h2 class="section-title">Design is mijn passie,<br> code mijn tool.</h2>
-                <div class="text-content">
-                    <p>
-                        Hallo! Ik ben Isaac, een eerstejaars student Digitale Vormgeving aan Hogeschool PXL. Mijn reis in
-                        design begon met een fascinatie voor hoe visuele elementen emoties kunnen oproepen en verhalen kunnen vertellen.
-                    </p>
-                    <p>
-                        Wat mij speciaal maakt? Ik combineer een rustige, analytische aanpak met creatieve vrijheid. Ik geloof
-                        in de kracht van clean design, waar elk element een doel heeft en niets overbodig is.
-                    </p>
-                    <p>
-                        Ik koos voor Digitale Vormgeving omdat het de perfecte kruising is tussen kunst en technologie. Het stelt me in
-                        staat om niet alleen te dromen, maar ook te bouwen.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card-stack">
-                <div class="feature-card-row">
-                    <h3>Mijn visie op design</h3>
-                    <p>Design moet functioneel én mooi zijn. Ik streef naar oplossingen die niet alleen goed ogen, maar ook intuïtief werken. Minimalisme is geen beperking, maar een krachtige tool om de essentie naar voren te brengen.</p>
-                </div>
-                <div class="feature-card-row">
-                    <h3>Waarom ik een goede designer word</h3>
-                    <p>Ik ben gedisciplineerd, leergierig en niet bang om te experimenteren. Mijn werkervaring in schoonmaak, horeca en verkoop heeft me geleerd om te werken onder druk, aandacht te hebben voor detail en effectief te communiceren.</p>
-                </div>
-                <div class="feature-card-row">
-                    <h3>Mijn designstijl</h3>
-                    <div class="tag-cloud">
-                        <span class="style-tag">Rustig</span>
-                        <span class="style-tag">Modern</span>
-                        <span class="style-tag">Strak</span>
-                        <span class="style-tag">Clean</span>
-                        <span class="style-tag">Grote typografie</span>
-                        <span class="style-tag">Functioneel</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projecten" class="section-content">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Projecten</span>
-                <h2 class="section-title">Geselecteerde werken</h2>
-                <p class="section-subtitle">Een selectie van school- en persoonlijke projecten waar ik trots op ben.</p>
-            </div>
-
-            <div class="projects-grid">
-
-                <a href="projecten/dishdash/Homepage.html" class="project-card web">
-                    <div class="card-image-wrapper">
-                        <img src="mockup/mockupdishdash.png" alt="TakeAway Website Design" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">SCHOOLPROJECT - SCRIPTING</span>
-                        <h3>TakeAway Website</h3>
-                        <p>Een interactieve TakeAway-website gebouwd met HTML, CSS en JavaScript. Focus op moderne UI, dynamische elementen en een strakke pagina-structuur.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="projecten/festival/Festivals.html" class="project-card web">
-                    <div class="card-image-wrapper">
-                        <img src="mockup/mockupfestival.png" alt="Festival Website Design" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">SCHOOLPROJECT - SCRIPTING</span>
-                        <h3>Interactieve Website</h3>
-                        <p>Kleine website gemaakt als oefening voor het vak Scripting. Volledig zelf opgebouwd: structuur, design en alle code.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="projecten/visuals/design.html" class="project-card web"> <div class="card-image-wrapper">
-                    <img src="mockup/mockupvisuals.png" alt="Posters en Visuals" class="card-image">
-                </div>
-                    <div class="card-content">
-                        <span class="card-category">SCHOOLPROJECT - DESIGN</span>
-                        <h3>Posters & Visuals</h3>
-                        <p>Collectie van posters ontworpen in Photoshop en Figma. Focus op kleurgebruik, typografie en sterke visuele compositie.</p>
-                        <div class="tags">
-                            <span class="tag">Photoshop</span>
-                            <span class="tag">Illustrator</span>
-                            <span class="tag">Figma</span>
-                            <span class="tag">Graphic Design</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="projecten/Bakkerij/index.html" class="project-card web">
-                    <div class="card-image-wrapper">
-                        <img src="mockup/mockupbakkerij.png" alt="Bakkerij Website Design" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Website & Branding</span>
-                        <h3>Bakkerij Sven | Landen</h3>
-                        <p>Een sfeervolle website voor een lokale ambachtelijke bakkerij. Het ontwerp legt de nadruk op versheid en gezelligheid.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Responsive</span>
-                            <span class="tag">Design</span>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section-content">
-        <div class="container">
-            <div class="section-header" style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <span class="section-tag">Skills & Expertise</span>
-                <h2 class="section-title">Wat ik in huis heb</h2>
-                <p class="section-subtitle">Een overzicht van mijn technische vaardigheden en werkervaring.</p>
-            </div>
-
-            <div class="skills-cards-grid">
-
-                <div class="skill-card">
-                    <div class="card-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg-icon">
-                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
-                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
-                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
-                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
-                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Design Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-list-item">
-                            <span class="skill-name">Photoshop</span>
-                            <span class="skill-level">Gevorderd</span>
-                        </div>
-                        <div class="skill-list-item">
-                            <span class="skill-name">Figma</span>
-                            <span class="skill-level">Gevorderd</span>
-                        </div>
-                        <div class="skill-list-item">
-                            <span class="skill-name">Illustrator</span>
-                            <span class="skill-level">Beginner</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="card-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg-icon">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Development</h3>
-                    <div class="skill-list">
-                        <div class="skill-list-item">
-                            <span class="skill-name">HTML</span>
-                            <span class="skill-level">Gevorderd</span>
-                        </div>
-                        <div class="skill-list-item">
-                            <span class="skill-name">CSS</span>
-                            <span class="skill-level">Gevorderd</span>
-                        </div>
-                        <div class="skill-list-item">
-                            <span class="skill-name">JavaScript</span>
-                            <span class="skill-level">Gemiddeld</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <div class="card-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-svg-icon">
-                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                    </div>
-                    <h3>Ervaring buiten DVO</h3>
-                    <div class="skill-list">
-                        <div class="skill-list-item experience-item">
-                            <span class="skill-name">Schoonmaak</span>
-                        </div>
-                        <div class="skill-list-item experience-item">
-                            <span class="skill-name">Horeca</span>
-                        </div>
-                        <div class="skill-list-item experience-item">
-                            <span class="skill-name">Verkoop</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="designstijl" class="section-content-white">
-        <div class="container">
-            <div class="section-header center-text">
-                <br>
-                <h2 class="section-title">Mijn Persoonlijke Designstijl</h2>
-            </div>
-            <div class="design-pills-container">
-                <span class="design-pill">Rustig</span>
-                <span class="design-pill">Modern</span>
-                <span class="design-pill">Strak</span>
-                <span class="design-pill">Clean</span>
-                <span class="design-pill">Grote Typografie</span>
-                <span class="design-pill">Functioneel</span>
-                <span class="design-pill">Minimalistisch</span>
-                <br>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-content">
-        <div class="container">
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <div class="section-header">
-                        <span class="section-tag">Contact</span>
-                        <h2 class="section-title">Laten we samenwerken</h2>
-                        <p class="section-subtitle">
-                            Heb je een project in gedachten of wil je gewoon even connecten? Stuur gerust een bericht!
-                        </p>
-                    </div>
-
-                    <div class="contact-details">
-                        <div class="detail-item">
-                            <div class="detail-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="detail-icon">
-                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                                </svg>
-                            </div>
-                            <div class="detail-text">
-                                <span class="detail-label">Email</span>
-                                <a href="mailto:isaac.andre@student.pxl.be" class="detail-value">isaac.andre@student.pxl.be</a>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <div class="detail-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="detail-icon">
-                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <div class="detail-text">
-                                <span class="detail-label">Locatie</span>
-                                <span class="detail-value">Hasselt, België</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form class="contact-form-card" name="contact" method="POST" data-netlify="true">
-
-                        <input type="hidden" name="form-name" value="contact">
-
-                        <div class="form-group">
-                            <label for="naam">Naam</label>
-                            <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="jouw@email.be" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="bericht">Bericht</label>
-                            <textarea id="bericht" name="bericht" rows="4" placeholder="Vertel me over je project..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-submit">
-                            Verstuur bericht
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="22" x2="11" y1="2" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-<section class="extras-section">
-    <h2>Achter de Schermen</h2>
-
-    <div class="extras-grid">
-
-        <div class="extra-card support-team">
-            <h3>🐾 Creative Support</h3>
-            <p class="intro-text">Mijn designs krijgen mentale steun van mijn twee trouwe viervoeters.</p>
-
-            <div class="dog-photos">
-                <div class="dog">
-                    <img src="boby.jpg" alt="Foto van Boby">
-                    <span>Boby</span>
-                </div>
-                <div class="dog">
-                    <img src="loky.jpg" alt="Foto van Loky">
-                    <span>Loky</span>
-                </div>
-            </div>
-
-            <p class="subtext">Zij zorgen voor de nodige rust en wandelpauzes om mijn creatieve blik scherp te houden.</p>
-        </div>
-
-        <div class="extra-card spotify-wrapper">
-            <h3>🎧 Design Flow</h3>
-            <div class="iframe-container">
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3DWLgqEzlqoWcjZQdKbwLG?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </div>
-
+    </div>
+    <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        Scroll
     </div>
 </section>
-<br><br><br>
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-meta">
-                <span class="footer-brand">Isaac André</span>
-                <p class="footer-tagline">"Creativity through clean design."</p>
 
-                <p class="copyright">© 2025 Alle rechten voorbehouden.</p>
-                <p class="copyright">Dit is een educatief schoolproject. </p>
-                <p class="copyright">Afbeeldingen en logo's in de portfolio-items blijven eigendom van de rechthebbenden. </p>
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-grid">
+        <div class="about-image-wrap reveal">
+                <img src="pictures/IsaacPFP.png" alt="Isaac André" />
+        </div>
+        <div class="about-text">
+            <p class="section-tag reveal">Over Mij</p>
+            <h2 class="section-heading reveal reveal-delay-1">Design<br>is mijn<br>passie.</h2>
+            <p class="about-bio reveal reveal-delay-2">
+                Hallo! Ik ben <strong>Isaac</strong>, student <strong>Digitale Vormgeving</strong> aan Hogeschool PXL.
+                Mijn reis in design begon met een fascinatie voor hoe visuele elementen emoties kunnen oproepen en verhalen kunnen vertellen.<br><br>
+                Wat mij speciaal maakt? Ik combineer een <strong>rustige, analytische aanpak</strong> met creatieve vrijheid.
+                Ik geloof in de kracht van clean design waar elk element een doel heeft en niets overbodig is.
+                Minimalisme is geen beperking, maar een krachtige tool om de essentie naar voren te brengen.
+            </p>
+            <div class="style-chips reveal reveal-delay-2">
+                <span class="style-chip">Rustig</span>
+                <span class="style-chip">Modern</span>
+                <span class="style-chip">Strak</span>
+                <span class="style-chip">Clean</span>
+                <span class="style-chip">Grote Typografie</span>
+                <span class="style-chip">Functioneel</span>
+                <span class="style-chip">Minimalistisch</span>
             </div>
-
-            <nav class="footer-nav">
-                <a href="https://github.com/IsaacAndrePXL" target="_blank" class="footer-link">GitHub</a>
-                <span class="separator">•</span>
-                <a href="privacy.html" class="footer-link">Privacyverklaring</a>
-            </nav>
+            <div class="about-stats reveal reveal-delay-3">
+                <div>
+                    <div class="stat-num">DVO</div>
+                    <div class="stat-label">PXL</div>
+                </div>
+                <div>
+                    <div class="stat-num">Talrijke</div>
+                    <div class="stat-label">Projecten</div>
+                </div>
+                <div>
+                    <div class="stat-num">BE</div>
+                    <div class="stat-label">Hasselt, België</div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
-<script src="script.js"></script>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-simple">
+    <div class="projects-cta-content reveal">
+        <p class="section-tag">Geselecteerde Werken</p>
+        <h2 class="section-heading">Mijn Projecten</h2>
+        <p class="projects-desc">
+            Ontdek mijn selectie van design en development projecten. Van strakke websites en branding tot creatieve posters.
+        </p>
+        <a href="Projecten.html" class="btn-cta reveal reveal-delay-1">
+            <span>Bekijk Mijn Projecten</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="skills-intro">
+        <p class="section-tag reveal">Wat ik In Huis Heb</p>
+        <h2 class="section-heading reveal reveal-delay-1">Skills &amp; Stack</h2>
+    </div>
+
+    <div class="marquee-wrap reveal">
+        <div class="marquee-track">
+            <span class="marquee-item">Photoshop<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Figma<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Illustrator<span class="marquee-dot"></span></span>
+            <span class="marquee-item">HTML<span class="marquee-dot"></span></span>
+            <span class="marquee-item">CSS<span class="marquee-dot"></span></span>
+            <span class="marquee-item">JavaScript<span class="marquee-dot"></span></span>
+            <span class="marquee-item">UI/UX Design<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Graphic Design<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Photoshop<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Figma<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Illustrator<span class="marquee-dot"></span></span>
+            <span class="marquee-item">HTML<span class="marquee-dot"></span></span>
+            <span class="marquee-item">CSS<span class="marquee-dot"></span></span>
+            <span class="marquee-item">JavaScript<span class="marquee-dot"></span></span>
+            <span class="marquee-item">UI/UX Design<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Graphic Design<span class="marquee-dot"></span></span>
+        </div>
+    </div>
+
+    <div class="marquee-wrap reverse reveal">
+        <div class="marquee-track">
+            <span class="marquee-item">Typografie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Kleurtheorie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Responsive Design<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Branding<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Compositie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Webdesign<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Clean Code<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Visuele Communicatie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Typografie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Kleurtheorie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Responsive Design<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Branding<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Compositie<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Webdesign<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Clean Code<span class="marquee-dot"></span></span>
+            <span class="marquee-item">Visuele Communicatie<span class="marquee-dot"></span></span>
+        </div>
+    </div>
+
+    <div class="skills-categories">
+        <div class="skill-cat reveal">
+            <p class="skill-cat-label">Design Tools</p>
+            <div class="skill-row"><span class="skill-name-text">Photoshop</span><span class="skill-level">Gevorderd</span></div>
+            <div class="skill-row"><span class="skill-name-text">Figma</span><span class="skill-level">Gevorderd</span></div>
+            <div class="skill-row"><span class="skill-name-text">Illustrator</span><span class="skill-level">Gevorderd</span></div>
+            <div class="skill-row"><span class="skill-name-text">InDesign</span><span class="skill-level">Beginner</span></div>
+        </div>
+        <div class="skill-cat reveal reveal-delay-1">
+            <p class="skill-cat-label">Development</p>
+            <div class="skill-row"><span class="skill-name-text">HTML</span><span class="skill-level">Gemiddeld</span></div>
+            <div class="skill-row"><span class="skill-name-text">CSS</span><span class="skill-level">Gemiddeld</span></div>
+            <div class="skill-row"><span class="skill-name-text">JavaScript</span><span class="skill-level">Beginner</span></div>
+        </div>
+        <div class="skill-cat reveal reveal-delay-2">
+            <p class="skill-cat-label">Werkervaring</p>
+            <div class="skill-list">
+                <span class="skill-tag">Schoonmaak</span>
+                <span class="skill-tag">Horeca</span>
+                <span class="skill-tag">Verkoop</span>
+                <span class="skill-tag">Werken onder druk</span>
+                <span class="skill-tag">Oog voor detail</span>
+                <span class="skill-tag">Communicatie</span>
+            </div>
+        </div>
+        <div class="skill-cat reveal reveal-delay-3">
+            <p class="skill-cat-label">Designfilosofie</p>
+            <div class="skill-list">
+                <span class="skill-tag">Minimalistisch</span>
+                <span class="skill-tag">Functioneel</span>
+                <span class="skill-tag">Typografie-first</span>
+                <span class="skill-tag">Clean</span>
+                <span class="skill-tag">Modern</span>
+                <span class="skill-tag">Strak</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="contact-bg-text" aria-hidden="true">CONTACT</div>
+    <div class="contact-content">
+        <p class="section-tag reveal" style="text-align:center;margin-bottom:.8rem;">Neem Contact Op</p>
+        <h2 class="contact-heading reveal reveal-delay-1">
+            Laten we<br><span>Samenwerken.</span>
+        </h2>
+        <a href="mailto:isaac.andre@student.pxl.be" class="contact-email reveal reveal-delay-2">
+            isaac.andre@student.pxl.be
+        </a>
+
+        <div class="social-links reveal reveal-delay-3">
+            <a href="https://github.com/IsaacAndrePXL" target="_blank" rel="noopener" class="social-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                GitHub
+            </a>
+            <a href="mailto:isaac.andre@student.pxl.be" class="social-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                E-mail
+            </a>
+            <a href="https://isaacandredvoportfolio.netlify.app/privacy" target="_blank" rel="noopener" class="social-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                Privacy
+            </a>
+        </div>
+
+        <div class="pets-wrap reveal reveal-delay-4">
+            <p class="pets-label">🐾 Creative Support</p>
+            <div class="pets-row">
+                <div class="pet-item">
+                    <img src="https://isaacandredvoportfolio.netlify.app/boby.jpg" alt="Boby" />
+                    <span class="pet-name">Boby</span>
+                </div>
+                <div class="pet-item">
+                    <img src="https://isaacandredvoportfolio.netlify.app/loky.jpg" alt="Loky" />
+                    <span class="pet-name">Loky</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span class="footer-copy">© 2025 Isaac André · Educatief schoolproject · PXL Hasselt</span>
+        <a href="index.html" class="footer-logo">
+            <img src="pictures/apple-touch-icon.png" alt="Isaac André" class="footer-logo-img" />
+        </a>
+    </footer>
+</section>
+
+<script src="main.js"></script>
 </body>
 </html>
