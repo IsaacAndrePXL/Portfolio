@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | DishDash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="Homepage.html" class="logo-link">
+        <div class="logo-box">
+            <img class="logo-img" src="Logos/DishDashLogo.png" alt="DishDash logo">
+        </div>
+        <div class="logo-text">
+            <span class="dishdash">DishDash</span>
+            <span class="slogan">Italiaanse take-away</span>
+        </div>
+    </a>
+</header>
+
+<main class="checkout dish-container">
+    <h1 class="checkout-title">Afrekenen</h1>
+
+    <section class="checkout-card">
+        <h2>Je bestelling</h2>
+        <div class="cart-items" id="cartItems"></div>
+    </section>
+
+    <section class="checkout-card">
+        <h2>Kortingscode</h2>
+        <div class="coupon-box">
+            <label for="couponInput"></label><input type="text" id="couponInput" placeholder="Voer kortingscode in">
+            <button id="applyCoupon">Toepassen</button>
+        </div>
+        <p id="couponMessage"></p>
+    </section>
+
+    <section class="checkout-card totals">
+        <div class="totals-row">
+            <span>Subtotaal</span>
+            <span id="totaalPrijs">€0.00</span>
+        </div>
+        <div class="totals-row">
+            <span>Korting</span>
+            <span id="korting">€0.00</span>
+        </div>
+        <div class="totals-row total-final">
+            <strong>Totaal</strong>
+            <strong id="eindTotaal">€0.00</strong>
+        </div>
+
+        <button class="btn-clear" id="clearCart">Leeg mandje</button>
+    </section>
+    <button class="btn-checkout" id="placeOrder">Bestellen</button>
+
+</main>
+
+<footer>
+    DishDash © 2025 – Alle rechten voorbehouden.
+</footer>
+
+<script src="checkout.js"></script>
+</body>
+</html>
