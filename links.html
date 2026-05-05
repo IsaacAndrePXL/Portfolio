@@ -4,228 +4,195 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Isaac André — Links</title>
-
-    <link rel="icon" type="image/png" href="pictures/favicon.ico" />
-    <link rel="apple-touch-icon" href="pictures/apple-touch-icon.png" />
-
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="links.css" />
+    <link rel="stylesheet" href="assets/css/links.css" />
 </head>
 <body>
+<div id="cursor"></div>
 
-    <div id="cursor"></div>
+<!-- BACKGROUND ELEMENTS -->
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="bg-grid"></div>
 
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
-    <div class="bg-grid"></div>
+<main class="page">
+    <!-- AVATAR + IDENTITY -->
+    <header class="identity">
+        <div class="avatar-wrap">
+            <img src="https://isaacandredvoportfolio.netlify.app/boby.jpg" alt="Isaac André" class="avatar" onerror="this.style.background='#0F1B2C'" />
+            <div class="avatar-ring"></div>
+            <div class="status-dot" title="Beschikbaar voor projecten"></div>
+        </div>
+        <!-- Logo under avatar -->
+        <a href="index.html" class="identity-logo-link">
+            <img src="assets/images/LogoIsaac.png" alt="Isaac André logo" class="identity-logo" />
+        </a>
+        <p class="identity-title">Digitale Vormgeving · PXL Hasselt</p>
+        <p class="identity-tagline">"Creativity through clean design."</p>
+    </header>
 
-    <main class="page">
+    <!-- LINK GROUPS -->
+    <div class="links-wrap">
 
-        <!-- AVATAR + IDENTITY -->
-        <header class="identity">
-            <div class="avatar-wrap">
-                <!--
-                    Vervang de src door jouw eigen portretfoto:
-                    <img src="jouw-foto.jpg" alt="Isaac André" class="avatar" />
-                -->
-                <img
-                    src="https://isaacandredvoportfolio.netlify.app/boby.jpg"
-                    alt="Isaac André"
-                    class="avatar"
-                    onerror="this.style.background='#0F1B2C'"
-                />
-                <div class="avatar-ring"></div>
-                <div class="status-dot" title="Beschikbaar voor projecten"></div>
-            </div>
+        <!-- GROEP 1 — Portfolio & Werk -->
+        <div class="link-group reveal">
+            <p class="group-label">Portfolio &amp; Werk</p>
 
-            <!-- Logo under avatar -->
-            <a href="index.html" class="identity-logo-link">
-                <img src="LogoIsaac.png" alt="Isaac André logo" class="identity-logo" />
-            </a>
-
-            <p class="identity-title">Digitale Vormgeving · PXL Hasselt</p>
-            <p class="identity-tagline">"Creativity through clean design."</p>
-        </header>
-
-        <!-- LINK GROUPS -->
-        <div class="links-wrap">
-
-            <!-- GROEP 1 — Portfolio & Werk -->
-            <div class="link-group reveal">
-                <p class="group-label">Portfolio &amp; Werk</p>
-
-                <a href="index.html" class="link-card link-card--featured">
+            <a href="index.html" class="link-card link-card--featured">
                     <span class="link-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="7" width="20" height="14" rx="2"/>
-                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-                            <line x1="12" y1="12" x2="12" y2="12.01"/>
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                            <line x1="12" y1="12" x2="12" y2="12.01" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">Mijn Portfolio</span>
                         <span class="link-desc">Alle projecten, skills &amp; info</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                    <span class="link-badge">Intern</span>
-                </a>
+                <span class="link-badge">Intern</span>
+            </a>
 
-                <a href="index.html#projects" class="link-card">
+            <a href="projects.html" class="link-card">
                     <span class="link-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="7" height="7" rx="1"/>
-                            <rect x="14" y="3" width="7" height="7" rx="1"/>
-                            <rect x="3" y="14" width="7" height="7" rx="1"/>
-                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                            <rect x="3" y="3" width="7" height="7" rx="1" />
+                            <rect x="14" y="3" width="7" height="7" rx="1" />
+                            <rect x="3" y="14" width="7" height="7" rx="1" />
+                            <rect x="14" y="14" width="7" height="7" rx="1" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">Mijn Creaties</span>
                         <span class="link-desc">TakeAway, Festival, Posters, Bakkerij</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                </a>
+            </a>
+        </div>
 
-            </div>
+        <!-- GROEP 2 — Professioneel -->
+        <div class="link-group reveal">
+            <p class="group-label">Professioneel</p>
 
-            <!-- GROEP 2 — Professioneel -->
-            <div class="link-group reveal">
-                <p class="group-label">Professioneel</p>
-
-                <a href="https://www.linkedin.com/in/isaac-andré" target="_blank" rel="noopener" class="link-card">
-                    <!-- 💡 Pas de LinkedIn URL aan naar jouw echte profiel-URL -->
+            <a href="https://www.linkedin.com/in/isaacandre/" target="_blank" rel="noopener" class="link-card">
                     <span class="link-icon link-icon--linkedin">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect x="2" y="9" width="4" height="12"/>
-                            <circle cx="4" cy="4" r="2"/>
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">LinkedIn</span>
                         <span class="link-desc">Professioneel netwerk</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                </a>
+            </a>
 
-                <a href="https://github.com/IsaacAndrePXL" target="_blank" rel="noopener" class="link-card">
+            <a href="https://github.com/IsaacAndrePXL" target="_blank" rel="noopener" class="link-card">
                     <span class="link-icon link-icon--github">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">GitHub</span>
                         <span class="link-desc">Source code &amp; repositories</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                </a>
+            </a>
 
-                <a href="mailto:isaac.andre@student.pxl.be" class="link-card">
+            <a href="mailto:isaac.andre@student.pxl.be" class="link-card">
                     <span class="link-icon link-icon--mail">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">E-mail</span>
                         <span class="link-desc">isaac.andre@student.pxl.be</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                </a>
+            </a>
+        </div>
 
-            </div>
+        <!-- GROEP 3 — Opleiding & Overig -->
+        <div class="link-group reveal">
+            <p class="group-label">Opleiding &amp; Overig</p>
 
-            <!-- GROEP 3 — Opleiding & Overig -->
-            <div class="link-group reveal">
-                <p class="group-label">Opleiding &amp; Overig</p>
-
-                <a href="https://www.pxl.be/digitale-vormgeving" target="_blank" rel="noopener" class="link-card">
+            <a href="https://www.pxl.be/digitale-vormgeving" target="_blank" rel="noopener" class="link-card">
                     <span class="link-icon link-icon--school">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">Hogeschool PXL</span>
                         <span class="link-desc">Digitale Vormgeving · Hasselt</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                </a>
+            </a>
 
-                <!--
-                    💡 AANBEVOLEN — voeg toe als je het hebt:
-
-                    Behance:
-                    <a href="https://www.behance.net/jouw-naam" ...>
-
-                    Instagram (design work):
-                    <a href="https://instagram.com/jouw-naam" ...>
-
-                    CV als PDF download:
-                    <a href="cv-isaac-andre.pdf" download ...>
-                -->
-
-                <a href="https://isaacandredvoportfolio.netlify.app/privacy" target="_blank" rel="noopener" class="link-card">
+            <a href="https://isaacandredvoportfolio.netlify.app/privacy" target="_blank" rel="noopener" class="link-card">
                     <span class="link-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         </svg>
                     </span>
-                    <span class="link-text">
+                <span class="link-text">
                         <span class="link-title">Privacyverklaring</span>
                         <span class="link-desc">Educatief schoolproject · PXL</span>
                     </span>
-                    <span class="link-arrow">
+                <span class="link-arrow">
                         <svg viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- FOOTER -->
-        <footer class="page-footer reveal">
-            <a href="index.html" class="footer-logo-link">
-                <img src="LogoIsaac.png" alt="Isaac André" class="footer-logo-img" />
             </a>
-            <span class="footer-copy">© 2025 Isaac André · PXL Hasselt</span>
-            <span class="footer-pets">🐾 Boby &amp; Loky approved</span>
-        </footer>
+        </div>
+    </div>
 
-    </main>
+    <!-- FOOTER -->
+    <footer class="page-footer reveal">
+        <a href="index.html" class="footer-logo-link">
+            <img src="assets/images/LogoIsaac.png" alt="Isaac André" class="footer-logo-img" />
+        </a>
+        <span class="footer-copy">© 2025 Isaac André · PXL Hasselt</span>
+        <span class="footer-pets">🐾 Boby &amp; Loky approved</span>
+    </footer>
+</main>
 
-    <script src="links.js"></script>
+<script src="assets/js/links.js"></script>
 </body>
 </html>

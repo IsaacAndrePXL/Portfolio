@@ -4,23 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Isaac André</title>
-
-    <link rel="icon" type="image/png" href="pictures/favicon.ico" />
-    <link rel="apple-touch-icon" href="pictures/apple-touch-icon.png" />
-
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-
 <div id="cursor"></div>
 
 <!-- NAV -->
 <nav id="navbar">
     <a href="index.html" class="nav-logo">
-        <img src="pictures/LogoHero.png" alt="Isaac André" class="nav-logo-img" />
+        <img src="assets/images/LogoHero.png" alt="Isaac André" class="nav-logo-img" />
     </a>
     <ul class="nav-links">
         <li><a href="#about">Over Mij</a></li>
@@ -43,7 +40,7 @@
         <a href="#projects" class="btn-cta reveal reveal-delay-3">
             <span>Bekijk Mijn Werk</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
     </div>
@@ -57,7 +54,7 @@
 <section id="about">
     <div class="about-grid">
         <div class="about-image-wrap reveal">
-                <img src="pictures/IsaacPFP.png" alt="Isaac André" />
+            <img src="assets/images/IsaacPFP.png" alt="Isaac André" />
         </div>
         <div class="about-text">
             <p class="section-tag reveal">Over Mij</p>
@@ -104,10 +101,10 @@
         <p class="projects-desc">
             Ontdek mijn selectie van design en development projecten. Van strakke websites en branding tot creatieve posters.
         </p>
-        <a href="Projecten.html" class="btn-cta reveal reveal-delay-1">
+        <a href="projects.html" class="btn-cta reveal reveal-delay-1">
             <span>Bekijk Mijn Projecten</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
     </div>
@@ -119,7 +116,6 @@
         <p class="section-tag reveal">Wat ik In Huis Heb</p>
         <h2 class="section-heading reveal reveal-delay-1">Skills &amp; Stack</h2>
     </div>
-
     <div class="marquee-wrap reveal">
         <div class="marquee-track">
             <span class="marquee-item">Photoshop<span class="marquee-dot"></span></span>
@@ -130,6 +126,7 @@
             <span class="marquee-item">JavaScript<span class="marquee-dot"></span></span>
             <span class="marquee-item">UI/UX Design<span class="marquee-dot"></span></span>
             <span class="marquee-item">Graphic Design<span class="marquee-dot"></span></span>
+            <!-- Duplicate for seamless loop -->
             <span class="marquee-item">Photoshop<span class="marquee-dot"></span></span>
             <span class="marquee-item">Figma<span class="marquee-dot"></span></span>
             <span class="marquee-item">Illustrator<span class="marquee-dot"></span></span>
@@ -140,7 +137,6 @@
             <span class="marquee-item">Graphic Design<span class="marquee-dot"></span></span>
         </div>
     </div>
-
     <div class="marquee-wrap reverse reveal">
         <div class="marquee-track">
             <span class="marquee-item">Typografie<span class="marquee-dot"></span></span>
@@ -151,6 +147,7 @@
             <span class="marquee-item">Webdesign<span class="marquee-dot"></span></span>
             <span class="marquee-item">Clean Code<span class="marquee-dot"></span></span>
             <span class="marquee-item">Visuele Communicatie<span class="marquee-dot"></span></span>
+            <!-- Duplicate for seamless loop -->
             <span class="marquee-item">Typografie<span class="marquee-dot"></span></span>
             <span class="marquee-item">Kleurtheorie<span class="marquee-dot"></span></span>
             <span class="marquee-item">Responsive Design<span class="marquee-dot"></span></span>
@@ -161,7 +158,6 @@
             <span class="marquee-item">Visuele Communicatie<span class="marquee-dot"></span></span>
         </div>
     </div>
-
     <div class="skills-categories">
         <div class="skill-cat reveal">
             <p class="skill-cat-label">Design Tools</p>
@@ -214,50 +210,38 @@
         </a>
 
         <div class="social-links reveal reveal-delay-3">
+            <a href="https://www.linkedin.com/in/isaacandre/" target="_blank" rel="noopener" class="social-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                LinkedIn
+            </a>
             <a href="https://github.com/IsaacAndrePXL" target="_blank" rel="noopener" class="social-link">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
                 GitHub
             </a>
             <a href="mailto:isaac.andre@student.pxl.be" class="social-link">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
                 </svg>
                 E-mail
             </a>
-            <a href="https://isaacandredvoportfolio.netlify.app/privacy" target="_blank" rel="noopener" class="social-link">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-                Privacy
-            </a>
-        </div>
 
-        <div class="pets-wrap reveal reveal-delay-4">
-            <p class="pets-label">🐾 Creative Support</p>
-            <div class="pets-row">
-                <div class="pet-item">
-                    <img src="https://isaacandredvoportfolio.netlify.app/boby.jpg" alt="Boby" />
-                    <span class="pet-name">Boby</span>
-                </div>
-                <div class="pet-item">
-                    <img src="https://isaacandredvoportfolio.netlify.app/loky.jpg" alt="Loky" />
-                    <span class="pet-name">Loky</span>
-                </div>
-            </div>
         </div>
-    </div>
 
     <footer>
         <span class="footer-copy">© 2025 Isaac André · Educatief schoolproject · PXL Hasselt</span>
         <a href="index.html" class="footer-logo">
-            <img src="pictures/apple-touch-icon.png" alt="Isaac André" class="footer-logo-img" />
+            <img src="assets/images/icons/apple-touch-icon.png" alt="Isaac André" class="footer-logo-img" />
         </a>
     </footer>
 </section>
 
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

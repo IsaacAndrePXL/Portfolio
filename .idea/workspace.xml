@@ -4,30 +4,103 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="First commit, transferred project from rep" />
+    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="First commit, transferred project from rep">
+      <change afterPath="$PROJECT_DIR$/assets/css/case.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/CristalineMockup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bakkerij/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bakkerij/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bakkerij/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projecten.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/design.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/pe-scripting-2526-IsaacAndrePXL.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Homepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Logos/DishDashLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Al_funghi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Arrabbiata.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Bolognese.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Caesar_salad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Carbonara.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Cheesecake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Espresso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Greek_salad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Lemonade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Margherita.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Pepperoni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Tiramisu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/checkout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/menu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishdash/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/links.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/IsaacPFP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/IsaacPFPSQR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/LogoHero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/Artboard 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/Chihiro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/CloseAI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/Hert.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/Ladygag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/LyingSpree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/design.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/design.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/typo-shapes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visuals/wireframesbankapp.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "IsaacAndrePXL"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IsaacAndrePXL&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/IsaacAndrePXL/Portfolio.git",
-    "accountId": "b2fcc2d6-a08f-43d8-ab6a-188224209645"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IsaacAndrePXL/Portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;b2fcc2d6-a08f-43d8-ab6a-188224209645&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3DDv9USxUD6yS0ZNJQps9Pn1Nu0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,13 +108,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +127,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Portfolio\assets\images" />
+      <recent name="C:\Portfolio\Projecten" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -66,6 +148,8 @@
       <option name="presentableId" value="Default" />
       <updated>1777829303698</updated>
       <workItem from="1777829304990" duration="722000" />
+      <workItem from="1777934466876" duration="1539000" />
+      <workItem from="1778018292214" duration="3872000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
