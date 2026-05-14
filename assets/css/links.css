@@ -136,8 +136,22 @@ body::after {
 
 /* ── IDENTITY / AVATAR ───────────────────────────────────────── */
 .identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.identity-logo {
+    height: 25px;
+    width: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.identity-logo:hover {
+    transform: scale(1.1);
 }
 
 .avatar-wrap {
@@ -155,6 +169,7 @@ body::after {
     border: 2px solid var(--border);
     transition: filter .3s, border-color .3s;
 }
+
 .avatar-wrap:hover .avatar {
     filter: grayscale(0%);
     border-color: var(--baltic);
@@ -412,6 +427,11 @@ body::after {
     font-size: .75rem; font-weight: 300;
     color: var(--muted);
     font-style: italic;
+}
+
+.identity-logo {
+    height: 25px;
+    width: auto;
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */

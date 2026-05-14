@@ -5,69 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="First commit, transferred project from rep">
-      <change afterPath="$PROJECT_DIR$/assets/css/case.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/CristalineMockup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bakkerij/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bakkerij/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bakkerij/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projecten.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/design.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/pe-scripting-2526-IsaacAndrePXL.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Checkout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Logos/DishDashLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Al_funghi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Arrabbiata.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Bolognese.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Caesar_salad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Carbonara.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Cheesecake.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Espresso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Greek_salad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Lemonade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Margherita.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Pepperoni.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/Pictures/Tiramisu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/checkout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/menu.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dishdash/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/links.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/links.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/links.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristaline.html" beforeDir="false" afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/IsaacPFP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/IsaacPFPSQR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/LogoHero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/Artboard 2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/Chihiro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/CloseAI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/Hert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/Ladygag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/LyingSpree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/design.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/design.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/typo-shapes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visuals/wireframesbankapp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dishdash/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/dishdash/Homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dishdash/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/projects/dishdash/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,29 +50,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Portfolio\assets\images\icons" />
       <recent name="C:\Portfolio\assets\images" />
       <recent name="C:\Portfolio\Projecten" />
     </key>
@@ -150,6 +95,9 @@
       <workItem from="1777829304990" duration="722000" />
       <workItem from="1777934466876" duration="1539000" />
       <workItem from="1778018292214" duration="3872000" />
+      <workItem from="1778063326979" duration="5416000" />
+      <workItem from="1778685369026" duration="706000" />
+      <workItem from="1778795537782" duration="2645000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />

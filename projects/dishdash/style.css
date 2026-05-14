@@ -872,36 +872,37 @@ footer {
 
 /* Universal Back Button Styles */
 .universal-back-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background-color: #ffffff;
-    color: #111827;
-    padding: 10px 20px;
-    border-radius: 9999px;
+    gap: 0.7rem;
+    padding: 0.7rem 1.4rem;
+    background-color: #02050F; /* portfolio --ink */
+    border: 1px solid #486493; /* portfolio --baltic */
+    color: #eef1f8; /* portfolio --white */
+    font-family: 'Barlow Condensed', sans-serif; /* Portfolio lettertype */
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     text-decoration: none;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 500;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.05);
-    z-index: 99999;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.35s, border-color 0.35s, color 0.35s;
+    cursor: pointer;
 }
 
 .universal-back-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    background-color: #f9fafb;
+    border-color: #7691C8; /* portfolio --wisteria */
+    background-color: #0F1B2C; /* portfolio --prussian */
 }
 
 .universal-back-btn svg {
-    width: 18px;
-    height: 18px;
     stroke: currentColor;
+    transition: transform 0.3s;
+}
+
+.universal-back-btn:hover svg {
+    transform: translateX(-4px); /* Schuift het pijltje iets naar links bij hover */
 }
 
 @media (max-width: 600px) {
