@@ -1,4 +1,3 @@
-// Wacht tot de pagina geladen is
 document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle Openingsuren Logic
@@ -11,34 +10,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (uren.classList.contains("hidden")) {
                 btn.textContent = "Bekijk openingsuren";
-                btn.classList.remove('active');
             } else {
                 btn.textContent = "Verberg openingsuren";
-                btn.classList.add('active');
             }
         });
     }
 
-    // Smooth scroll voor alle links in de navigatie
+    // Smooth scroll voor alle navigatie links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            // Check of het een interne link is (voorkomt dat we de terug-knop blokkeren)
+            if(this.getAttribute('href').length > 1) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
     });
 });
 
-// Functie aangeroepen door de Hero knop
+// Functie voor de Hero knop
 function scrollToSection(id) {
     const element = document.getElementById(id);
     if(element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 }

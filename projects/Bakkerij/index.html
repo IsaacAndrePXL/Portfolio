@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakkerij Sven | De smaak van Landen</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/icons/Icon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<a href="../../index.html#projecten" class="universal-back-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span class="back-text">Terug naar overzicht</span>
+</a>
 
 <nav class="navbar">
     <div class="logo">Bakkerij <span>Sven</span></div>
@@ -18,60 +28,58 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-<a href="../../index.html#projecten" class="universal-back-btn">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#3e3c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-    </svg>
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M14 21.0001V15.0001H10V21.0001M19 9.77818V16.2001C19 17.8802 19 18.7203 18.673 19.362C18.3854 19.9265 17.9265 20.3855 17.362 20.6731C16.7202 21.0001 15.8802 21.0001 14.2 21.0001H9.8C8.11984 21.0001 7.27976 21.0001 6.63803 20.6731C6.07354 20.3855 5.6146 19.9265 5.32698 19.362C5 18.7203 5 17.8802 5 16.2001V9.77753M21 12.0001L15.5668 5.96405C14.3311 4.59129 13.7133 3.9049 12.9856 3.65151C12.3466 3.42894 11.651 3.42899 11.0119 3.65165C10.2843 3.90516 9.66661 4.59163 8.43114 5.96458L3 12.0001" stroke="#3e3c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-</a>
 
 <header id="home" class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Ambachtelijk genieten in Landen</h1>
-        <p>Elke ochtend vers gebakken brood, pistolets en patisserie.</p>
-        <button class="btn-primary" onclick="scrollToSection('aanbod')">Bekijk ons aanbod <i class="fas fa-arrow-down"></i></button>
+        <p>Elke ochtend met liefde gebakken brood, knapperige pistolets en verfijnde patisserie.</p>
+        <button class="btn-primary" onclick="scrollToSection('aanbod')">Ontdek ons aanbod</button>
     </div>
 </header>
 
 <section id="about" class="section-padding">
     <div class="container text-center">
-        <h2><i class="fas fa-bread-slice icon-gold"></i> Over Bakkerij Sven</h2>
+        <h2 class="section-title">Over Bakkerij Sven</h2>
+        <div class="divider"></div>
         <p class="lead-text">
-            Al jaren een begrip in de Stationstraat. Wij combineren traditionele recepten met de beste ingrediënten.
-            Bij ons proef je de liefde voor het vak in elke hap.
+            Al generaties lang een vertrouwd gezicht in de Stationstraat. Wij geloven in de kracht van tijd, eerlijke ingrediënten en traditionele familierecepten. Bij ons proef je het echte ambacht in elke hap.
         </p>
     </div>
 </section>
 
 <section id="aanbod" class="bg-light section-padding">
     <div class="container">
-        <h2 class="text-center">Onze Specialiteiten</h2>
+        <h2 class="section-title text-center">Onze Specialiteiten</h2>
+        <div class="divider"></div>
         <div class="cards">
             <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73');"></div>
+                <div class="card-image-wrapper">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=800&q=80');"></div>
+                </div>
                 <div class="card-content">
-                    <h3>Vers Brood</h3>
-                    <p>Van wit en grof tot meergranen en spelt. Dagelijks ovenvers.</p>
+                    <h3>Ovenvers Brood</h3>
+                    <p>Van robuust desembrood tot fijn meergranen en spelt. Dagelijks met de hand gekneed en ovenvers afgebakken.</p>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec');"></div>
+                <div class="card-image-wrapper">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=800&q=80');"></div>
+                </div>
                 <div class="card-content">
-                    <h3>Koffiekoeken</h3>
-                    <p>Boterkoeken, chocoladebroodjes en onze befaamde croissants.</p>
+                    <h3>Viennoiserie</h3>
+                    <p>Roomzachte boterkoeken, smeuïge chocoladebroodjes en onze befaamde, luchtige croissants.</p>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-image-wrapper">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80');"></div>
+                </div>
                 <div class="card-content">
-                    <h3>Patisserie</h3>
-                    <p>Verjaardagstaarten, vlaaien en gebakjes voor elke gelegenheid.</p>
+                    <h3>Fijne Patisserie</h3>
+                    <p>Feestelijke taarten, verse fruitvlaaien en elegante gebakjes voor de speciale momenten in het leven.</p>
                 </div>
             </div>
         </div>
@@ -81,26 +89,26 @@
 <section id="contact" class="info-section section-padding">
     <div class="container grid-2">
         <div class="info-box">
-            <h2>Kom langs</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Stationstraat 3, 3400 Landen</p>
-            <p><i class="fas fa-phone"></i>Telefoonr.: 011 41 22 20</p>
-            <br>
-            <button id="toggleBtn" class="btn-secondary">Bekijk openingsuren</button>
+            <h2>Kom eens langs</h2>
+            <p class="contact-detail"><i class="fas fa-map-marker-alt"></i> Stationstraat 3, 3400 Landen</p>
+            <p class="contact-detail"><i class="fas fa-phone"></i> 011 41 22 20</p>
+
+            <button id="toggleBtn" class="btn-secondary mt-3">Bekijk openingsuren</button>
 
             <div id="uren" class="hours-box hidden">
                 <ul>
-                    <li><span>Maandag - Vrijdag:</span> <strong>07:00 – 17:30</strong></li>
-                    <li><span>Zaterdag:</span> <strong>07:00 – 17:30</strong></li>
-                    <li><span>Zondag:</span> <strong>07:00 – 16:00</strong></li>
-                    <li class="closed"><span>Woensdag:</span> <strong>Gesloten</strong></li>
+                    <li><span>Maandag - Vrijdag</span> <strong>07:00 – 17:30</strong></li>
+                    <li><span>Zaterdag</span> <strong>07:00 – 17:30</strong></li>
+                    <li><span>Zondag</span> <strong>07:00 – 16:00</strong></li>
+                    <li class="closed"><span>Woensdag</span> <strong>Gesloten</strong></li>
                 </ul>
             </div>
         </div>
         <div class="map-box">
             <iframe
-                    src="https://maps.google.com/maps?q=Bakkerij+Sven+Stationsstraat+3+Landen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.123456789!2d5.08!3d50.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ1JzAwLjAiTiA1wrAwNCcwMC4wIkU!5e0!3m2!1snl!2sbe!4v1620000000000!5m2!1snl!2sbe"
                     width="100%"
-                    height="300"
+                    height="100%"
                     style="border:0;"
                     allowfullscreen=""
                     loading="lazy">
@@ -110,8 +118,10 @@
 </section>
 
 <footer>
-    <p>&copy; 2025 Bakkerij Sven | Gemaakt met <i class="fas fa-heart"></i> in Landen.</p>
-    <p>Met dank aan Isaac André; Student digitale vormgeving @ Hogeschool PXL</p>
+    <div class="footer-content">
+        <p>© 2025 Bakkerij Sven | Ambachtelijk sinds 1985</p>
+        <p class="credits">Design door Isaac André – Digitale Vormgeving @ PXL</p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
