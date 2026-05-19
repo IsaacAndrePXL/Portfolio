@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="First commit, transferred project from rep">
+      <change afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/links.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/links.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cristaline.html" beforeDir="false" afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CristalineMockup.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/CristalineMockup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/dishdash/Homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/dishdash/Homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/dishdash/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/projects/dishdash/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +75,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Portfolio\assets\images\icons" />
       <recent name="C:\Portfolio\assets\images" />
+      <recent name="C:\Portfolio\assets\images\icons" />
       <recent name="C:\Portfolio\Projecten" />
     </key>
   </component>
@@ -98,6 +100,7 @@
       <workItem from="1778063326979" duration="5416000" />
       <workItem from="1778685369026" duration="706000" />
       <workItem from="1778795537782" duration="2645000" />
+      <workItem from="1779188541437" duration="2516000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
