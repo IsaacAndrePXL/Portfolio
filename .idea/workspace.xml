@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="added fontfolio, ominsoon, kikk festival">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/index.html" afterDir="false" />
+    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="switching between case changes automatically">
+      <change beforePath="$PROJECT_DIR$/pokr-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/pokr-app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1779188541437" duration="8503000" />
       <workItem from="1779229671819" duration="905000" />
       <workItem from="1779311467566" duration="1272000" />
-      <workItem from="1779390819256" duration="7692000" />
+      <workItem from="1779390819256" duration="8040000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
@@ -143,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779396122144</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="switching between case changes automatically">
+      <option name="closed" value="true" />
+      <created>1779398867630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779398867630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +159,8 @@
     <MESSAGE value="footer update" />
     <MESSAGE value="added privacy.html" />
     <MESSAGE value="added fontfolio, ominsoon, kikk festival" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fontfolio, ominsoon, kikk festival" />
+    <MESSAGE value="switching between case changes automatically" />
+    <option name="LAST_COMMIT_MESSAGE" value="switching between case changes automatically" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
