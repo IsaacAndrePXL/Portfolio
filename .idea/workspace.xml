@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="footer update">
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/Icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/favicon.ico" afterDir="false" />
+    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="added privacy.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/LogoHero.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cristaline.html" beforeDir="false" afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/Bakkerij/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +42,9 @@
     &quot;accountId&quot;: &quot;b2fcc2d6-a08f-43d8-ab6a-188224209645&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -102,6 +102,9 @@
       <workItem from="1778685369026" duration="706000" />
       <workItem from="1778795537782" duration="2645000" />
       <workItem from="1779188541437" duration="8503000" />
+      <workItem from="1779229671819" duration="905000" />
+      <workItem from="1779311467566" duration="1272000" />
+      <workItem from="1779390819256" duration="5131000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
@@ -119,7 +122,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779192295241</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added privacy.html">
+      <option name="closed" value="true" />
+      <created>1779229779437</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779229779437</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added privacy.html">
+      <option name="closed" value="true" />
+      <created>1779229789981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779229789981</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +147,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit, transferred project from rep" />
     <MESSAGE value="footer update" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer update" />
+    <MESSAGE value="added privacy.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="added privacy.html" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

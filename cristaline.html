@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-        <html lang="nl">
-        <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Cristaline Rebrand — Isaac André</title>
-        <link rel="icon" type="image/x-icon" href="../../assets/images/icons/Icon.svg">
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cristaline Rebrand — Isaac André</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/Icon.svg">
     <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,10 +15,9 @@
 <body>
 <div id="cursor"></div>
 
-<!-- NAV -->
 <nav id="navbar">
     <a href="index.html" class="nav-logo">
-        <img src="assets/images/LogoHero.png" alt="Isaac André" class="nav-logo-img" />
+        <img src="assets/images/icons/LogoHero.png" alt="Isaac André" class="nav-logo-img" />
     </a>
     <ul class="nav-links">
         <li><a href="index.html#about">Over Mij</a></li>
@@ -28,7 +27,6 @@
     </ul>
 </nav>
 
-<!-- HERO -->
 <header class="case-hero">
     <div class="case-hero-bg">
         <img src="assets/images/CoverCristaline.png" alt="Cristaline Rebrand" />
@@ -177,22 +175,21 @@
 
 </main>
 
-<!-- CASE NAVIGATION -->
-<nav class="case-nav">
+<!-- CASE NAVIGATION (Wordt dynamisch gevuld als main.js actief is) -->
+<nav class="case-nav reveal" id="dynamic-case-nav">
     <div class="case-nav-inner">
-
-        <!-- Vorige (leeg) -->
-        <span class="case-nav-link prev" style="opacity:.25; pointer-events:none; cursor:default;">
+        <!-- Vorig Project -->
+        <a href="#" class="case-nav-link prev" style="visibility: hidden;">
             <span class="case-nav-dir">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                     <path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Vorig project
+                Vorig Project
             </span>
-            <span class="case-nav-title">—</span>
-        </span>
+            <span class="case-nav-title">...</span>
+        </a>
 
-        <!-- Terug naar overzicht -->
+        <!-- Terug naar overzicht (in het midden, blijft altijd zichtbaar) -->
         <a href="projects.html" class="case-nav-overview case-nav-center">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="3" y="3" width="7" height="7" rx="1"/>
@@ -203,25 +200,77 @@
             Overzicht
         </a>
 
-        <!-- Volgende -->
-        <a href="takeaway.html" class="case-nav-link next">
+        <!-- Volgend Project -->
+        <a href="#" class="case-nav-link next" style="visibility: hidden;">
             <span class="case-nav-dir">
                 Volgend project
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </span>
-            <span class="case-nav-title">TakeAway Website</span>
+            <span class="case-nav-title">...</span>
         </a>
-
     </div>
 </nav>
 
-<footer style="border-top: 1px solid var(--border-dim); padding: 1.8rem 3rem; display:flex; justify-content:space-between; align-items:center;">
-    <span class="footer-copy">© 2025 Isaac André · Educatief schoolproject · PXL Hasselt</span>
-    <a href="index.html" class="footer-logo">
-        <img src="assets/images/icons/apple-touch-icon.png" alt="Isaac André" class="footer-logo-img" />
-    </a>
+<footer>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                <span class="footer-logo-text">ISAAC ANDRÉ</span>
+                <p class="footer-tagline">Digitale Vormgeving & Code</p>
+            </div>
+            <div class="footer-cta">
+                <span class="footer-cta-label">Een project starten?</span>
+                <a href="mailto:isaac.andre@student.pxl.be" class="footer-cta-email">isaac.andre@student.pxl.be</a>
+            </div>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Navigatie</h3>
+                <ul>
+                    <li><a href="Index.html" class="footer-link">Home</a></li>
+                    <li><a href="Index.html#about" class="footer-link">Over Mij</a></li>
+                    <li><a href="Index.html#skills" class="footer-link">Vaardigheden</a></li>
+                    <li><a href="privacy.html" class="footer-link">Privacyverklaring</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Projecten</h3>
+                <ul>
+                    <li><a href="projects.html" class="footer-link">Alle Projecten</a></li>
+                    <li><a href="cristaline.html" class="footer-link">Cristaline Mockup</a></li>
+                    <li><a href="projects/dishdash/Homepage.html" class="footer-link">DishDash App</a></li>
+                    <li><a href="projects/Bakkerij/index.html" class="footer-link">Bakkerij Website</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Socials</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-link social-icon-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/" target="_blank" class="footer-link social-icon-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 Isaac André. Alle rechten voorbehouden.</p>
+            <p class="footer-school">PXL — Digitale Vormgeving</p>
+        </div>
+    </div>
 </footer>
 
 <script src="assets/js/main.js"></script>
