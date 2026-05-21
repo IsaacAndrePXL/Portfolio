@@ -51,12 +51,6 @@ window.addEventListener('load', () => {
 });
 
 /* ── 5. PROJECT CARD VIDEO HOVER (optional) ───────────────────── */
-/*
-    Als je een video-preview wil per project, voeg dit toe aan de card:
-        <video class="card-video" muted loop src="preview.mp4"
-               style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></video>
-    Het script hieronder speelt hem automatisch af bij hover.
-*/
 document.querySelectorAll('.project-card').forEach(card => {
     const video = card.querySelector('video.card-video');
     if (!video) return;
@@ -65,4 +59,67 @@ document.querySelectorAll('.project-card').forEach(card => {
         video.pause();
         video.currentTime = 0;
     });
+});
+
+
+/* ================================================================
+   6. DYNAMISCHE PROJECT NAVIGATIE
+================================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Zorg dat deze links EXACT kloppen met de bestanden in je map!
+    const portfolioProjects = [
+        { url: "kikk-festival.html", title: "KIKK Festival" },
+        { url: "fontfolio.html", title: "Fontfolio" },
+        { url: "cristaline.html", title: "Cristaline Rebrand" },
+        { url: "takeaway.html", title: "Takeaway (DishDash)" },
+        { url: "bakkerij.html", title: "Bakkerij Website" }
+    ];
+
+    const caseNav = document.getElementById('dynamic-case-nav');
+
+    if (caseNav) {
+        const currentUrl = window.location.href.toLowerCase();
+
+        // Zoek naar het juiste project op basis van de link
+        let currentIndex = portfolioProjects.findIndex(proj => {
+            let searchString = proj.url.toLowerCase().split('/').pop();
+            // Als de naam 'index.html' is, zoek dan naar de mapnaam (zoals 'bakkerij')
+            if (searchString === 'index.html') {
+                const parts = proj.url.toLowerCase().split('/');
+                searchString = parts[parts.length - 2];
+            }
+            return currentUrl.includes(searchString);
+        });
+
+        if (currentIndex !== -1) {
+            const prevLink = caseNav.querySelector('.prev');
+            const nextLink = caseNav.querySelector('.next');
+
+            // Vorige knop instellen
+            if (currentIndex > 0) {
+                let prevProject = portfolioProjects[currentIndex - 1];
+                prevLink.href = prevProject.url;
+                prevLink.querySelector('.case-nav-title').textContent = prevProject.title;
+                prevLink.style.visibility = 'visible';
+                prevLink.style.display = 'flex';
+            } else {
+                prevLink.style.visibility = 'hidden';
+                prevLink.style.display = 'none'; // Haal hem weg voor een mooiere layout als er geen vorig project is
+            }
+
+            // Volgende knop instellen
+            if (currentIndex < portfolioProjects.length - 1) {
+                let nextProject = portfolioProjects[currentIndex + 1];
+                nextLink.href = nextProject.url;
+                nextLink.querySelector('.case-nav-title').textContent = nextProject.title;
+                nextLink.style.visibility = 'visible';
+                nextLink.style.display = 'flex';
+            } else {
+                nextLink.style.visibility = 'hidden';
+                nextLink.style.display = 'none';
+            }
+        } else {
+            console.warn("Projectnavigatie kon niet geladen worden. Check of de bestandsnaam klopt in de array.");
+        }
+    }
 });

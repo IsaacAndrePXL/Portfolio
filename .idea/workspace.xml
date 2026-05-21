@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="added privacy.html">
+    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="added fontfolio, ominsoon, kikk festival">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/LogoHero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cristaline.html" beforeDir="false" afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,7 @@
       <workItem from="1779188541437" duration="8503000" />
       <workItem from="1779229671819" duration="905000" />
       <workItem from="1779311467566" duration="1272000" />
-      <workItem from="1779390819256" duration="5131000" />
+      <workItem from="1779390819256" duration="7692000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
@@ -138,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779229789981</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added fontfolio, ominsoon, kikk festival">
+      <option name="closed" value="true" />
+      <created>1779396122144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779396122144</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +153,8 @@
     <MESSAGE value="First commit, transferred project from rep" />
     <MESSAGE value="footer update" />
     <MESSAGE value="added privacy.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="added privacy.html" />
+    <MESSAGE value="added fontfolio, ominsoon, kikk festival" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fontfolio, ominsoon, kikk festival" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
