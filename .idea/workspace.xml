@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="added refelction wpl2 and digital-creations.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Download/WPL1_Portfolio_IsaacAndre.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/digital-creations.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital-creations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +200,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780166286098</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added refelction wpl2 and digital-creations.html">
+      <option name="closed" value="true" />
+      <created>1780169058666</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1780169058666</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added refelction wpl2 and digital-creations.html">
+      <option name="closed" value="true" />
+      <created>1780169159889</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780169159889</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
