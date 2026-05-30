@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eindreflectie WPL2 — Isaac André</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/Icon.svg">
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/case.css" />
+
+    <style>
+        /* Minimalistische Header Zonder Achtergrondfoto */
+        .minimal-header {
+            max-width: 1200px;
+            margin: 8rem auto 2rem auto; /* Zorgt voor ruimte onder de navigatiebalk */
+            padding: 0 3rem;
+        }
+
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--ff-sub);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--silver);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-bottom: 2.5rem;
+        }
+
+        .back-home-btn:hover {
+            color: var(--white);
+        }
+
+        .back-home-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-home-btn:hover svg {
+            transform: translateX(-5px);
+        }
+
+        .minimal-title {
+            font-family: var(--ff-display);
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .minimal-subtitle {
+            font-family: var(--ff-sub);
+            font-size: 1.1rem;
+            color: var(--silver);
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        /* Nieuwe, moderne styling voor de download knoppen */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .dl-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            font-family: var(--ff-sub, sans-serif);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px; /* Strakke afgeronde hoeken */
+            transition: all 0.3s ease;
+        }
+
+        /* Opvallende witte knop */
+        .dl-btn-primary {
+            background-color: var(--white, #ffffff);
+            color: #000000;
+            border: 1px solid var(--white, #ffffff);
+        }
+
+        .dl-btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Subtiele outline knop */
+        .dl-btn-outline {
+            background-color: transparent;
+            color: var(--white, #ffffff);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dl-btn-outline:hover {
+            border-color: var(--white, #ffffff);
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+<div id="cursor"></div>
+
+<nav id="navbar">
+    <a href="index.html" class="nav-logo">
+        <img src="assets/images/icons/Logo.svg" alt="Isaac André" class="nav-logo-img" />
+    </a>
+</nav>
+
+<div class="minimal-header reveal">
+    <a href="index.html" class="back-home-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Terug naar Home
+    </a>
+
+    <h1 class="minimal-title">EINDREFLECTIE WPL 2</h1>
+    <p class="minimal-subtitle">
+        Een persoonlijke terugblik op Werkplekleren 2, mijn professionele groei, de obstakels en de integratie van de PXL X-factor.
+    </p>
+</div>
+
+<main class="case-body" style="padding-top: 1rem;">
+
+    <div class="case-section reveal">
+        <p class="case-section-label">01 — AIM-Reflectie</p>
+        <div class="case-section-body">
+            <h3>Terugblik op de voorbije periode.</h3>
+            <p>
+                Tijdens de afgelopen periode van Werkplekleren heb ik gewerkt aan "Pokr", een mobile-first appconcept speciaal ontworpen voor kleine KMO-teams om doelen te verankeren zonder KPI-stress. Binnen dit project was ik verantwoordelijk voor de UX/UI, de branding en het maken van tastbare mockups voor de campagne "It's not work. It's POKR.". Ik ging aan de slag met een team van voor mij totaal onbekende medestudenten. Mijn hoofddoel qua design was de belofte: "Alles in maximaal 3 kliks", wat ik visueel vertaalde naar zachte kleuren, ronde vormen en een overzichtelijk 'card-design'.
+            </p>
+            <p>
+                Wat mij het meest positief heeft verrast tijdens deze WPL-periode, was zonder twijfel de groepsdynamiek. Ik startte in een groep met mensen die ik totaal niet kende, maar gaandeweg is hier een echte vriendschap uit gegroeid. Dit had ik vooraf nooit durven denken en het maakte de samenwerking enorm waardevol. Daarnaast vond ik het visuele werk, zoals het uitkiezen van het kleurenpalet en het ontwerpen van de uiteindelijke mockups om het merk fysiek tot leven te wekken, ontzettend leuk om te doen.
+            </p>
+            <p>
+                Natuurlijk verliep niet alles vlekkeloos en waren er ook minder leuke elementen. Het uitgebreide benchmarking-onderzoek dat we moesten doen, vond ik eerlijk gezegd het meest vervelende onderdeel van het project. Daarnaast merkte ik dat juist het bepalen van de perfecte kleuren, hoewel ik dat heel leuk vond, soms ook erg frustrerend kon zijn. We botsten daar regelmatig op verschillende meningen en het was een uitdaging om tot een palet te komen dat perfect aansloot bij de positieve team-omgeving die we wilden creëren.
+            </p>
+            <p>
+                Een belangrijk inzicht dat ik uit dit project meeneem, is hoe cruciaal het is om constructief om te gaan met feedback. In het begin van het traject had ik daar best veel moeite mee en nam ik kritiek op mijn ontwerpen soms te persoonlijk op. Doorheen de rit heb ik geleerd om dit los te laten en de feedback puur te zien als een middel om het prototype, de app-flow en de eindpitch te verbeteren. Dit is een concreet inzicht dat ik niet alleen meeneem naar een volgende WPL, maar dat ik ook in de rest van mijn studies ga toepassen.
+            </p>
+            <p>
+                Mijn grootste persoonlijke succes tijdens Werkplekleren 2 is het afleveren van een werkend, interactief prototype waar ik oprecht trots op ben. Het feit dat ik erin geslaagd ben om de complexe "go-to-market" strategie en de UX-visie samen te smelten in een strakke eindpitch voor de finale jury, gaf me een enorme boost. Ik ben trots op de groei die ik heb doorgemaakt, zowel als designer (van digitaal naar tastbare dragers) als in mijn rol als teamspeler.
+            </p>
+        </div>
+    </div>
+
+    <div class="case-section reveal">
+        <p class="case-section-label">02 — Toekomst</p>
+        <div class="case-section-body">
+            <h3>Wat neem ik mee naar de volgende WPL?</h3>
+            <p>
+                Tijdens dit project heb ik gemerkt dat mijn flexibiliteit een grote kwaliteit is; ik kon me vlot aanpassen aan een groep onbekenden en kon snel schakelen tijdens het ontwerpproces. Mijn valkuil hierbij is echter dat ik soms te grenzeloos word en met alle winden meewaai om de vrede te bewaren. Mijn uitdaging voor de toekomst is om meer standvastigheid te tonen en achter mijn ontwerpkeuzes te blijven staan.
+            </p>
+            <p>
+                Daarnaast was mijn ontvankelijkheid voor nieuwe ideeën een sterkte, maar sloeg dit in het begin vaak om in de valkuil van onzekerheid. Ik trok me feedback op mijn kleuren of UX-keuzes te persoonlijk aan. Gedurende het project ben ik hierin gegroeid en is mijn uitdaging nu om feedback nog meer objectief te benaderen. Concreet wil ik dit aanpakken door bij een volgende WPL sneller tussentijdse feedback te vragen, zodat het een normaal onderdeel van mijn routine wordt. Ik wil mijn lectoren en PXL-coach dan ook vragen om mij hierin actief uit te dagen door kritisch naar mijn werk te kijken, zodat ik kan blijven oefenen om mijn professionele zelfverzekerdheid verder te ontwikkelen.
+            </p>
+        </div>
+    </div>
+
+    <div class="case-section reveal">
+        <p class="case-section-label">03 — PXL X-Factor</p>
+        <div class="case-section-body">
+            <h3>Reflectie over de X-factor.</h3>
+            <p>
+                Tijdens het ontwerpen van Pokr en de randzaken daaromheen, heb ik de vier pijlers van de PXL X-factor volop kunnen inzetten gedurende het project:
+            </p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 1.5rem; line-height: 1.8;">
+                <li style="margin-bottom: 1rem;">
+                    <strong>(Em)passie:</strong> Deze pijler kwam sterk naar voren in mijn rol als UX/UI-designer. Ik heb er veel tijd en passie in gestoken om de saaie tabellen van traditionele apps te vervangen door ronde vormen, zachte kleuren en een uitnodigend card-design. Mijn doel was om echt een positieve team-omgeving en een game-gevoel te creëren.
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <strong>Ondernemend & innovatief:</strong> Ik ben met een ondernemende blik aan de slag gegaan door het digitale appconcept te vertalen naar een fysiek merk. Door promotiemateriaal en mockups te maken voor de campagne "It's not work. It's POKR.", zorgde ik ervoor dat we ons product overtuigend konden pitchen alsof het klaar was voor de markt.
+                </li>
+                <li style="margin-bottom: 1rem;">
+                    <strong>(Internationaal) samen(net)werken:</strong> Binnen dit project werd ik in een team geplaatst met mensen die ik nog nooit had ontmoet. Ondanks de uitdagingen rond communicatie (zoals het bekritiseren van elkaars werk of de frustraties bij het kiezen van kleuren), zijn we erin geslaagd om als een hecht team samen te werken, wat zelfs heeft geleid tot mooie vriendschappen.
+                </li>
+                <li>
+                    <strong>Multi- & disciplinariteit:</strong> Ik heb niet alleen gefocust op de code of de digitale interface (de "3-kliks" UX), maar heb dit naadloos moeten combineren met marketing, communicatie en grafische vormgeving. De overstap van een digitaal prototype naar het ontwerpen van fysieke beursmaterialen en een complete eindpitch voor de finale jury toont aan dat ik over verschillende disciplines heen kan denken en werken.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="case-section reveal">
+        <p class="case-section-label">04 — Documenten</p>
+        <div class="case-section-body" style="text-align: center;">
+            <h3>Download de volledige bestanden.</h3>
+            <p>
+                Hieronder kan je mijn volledige portfolio van WPL1 en de PDF-versie van deze eindreflectie (WPL2) downloaden.
+            </p>
+
+            <div class="btn-group">
+                <a href="assets/downloads/WPL1_Portfolio_IsaacAndre.zip" target="_blank" class="dl-btn dl-btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download ZIP WPL1
+                </a>
+
+                <a href="assets/downloads/Eindreflectie_WPL2_IsaacAndre.pdf" target="_blank" class="dl-btn dl-btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Eindreflectie WPL2 PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                <span class="footer-logo-text">ISAAC ANDRÉ</span>
+                <p class="footer-tagline">Digitale Vormgeving & Code</p>
+            </div>
+            <div class="footer-cta">
+                <span class="footer-cta-label">Een project starten?</span>
+                <a href="mailto:isaac.andre@student.pxl.be" class="footer-cta-email">isaac.andre@student.pxl.be</a>
+            </div>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Navigatie</h3>
+                <ul>
+                    <li><a href="Index.html" class="footer-link">Home</a></li>
+                    <li><a href="Index.html#about" class="footer-link">Over Mij</a></li>
+                    <li><a href="Index.html#skills" class="footer-link">Vaardigheden</a></li>
+                    <li><a href="privacy.html" class="footer-link">Privacyverklaring</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Projecten</h3>
+                <ul>
+                    <li><a href="projects.html" class="footer-link">Alle Projecten</a></li>
+                    <li><a href="pokr-app.html" class="footer-link">Pokr App</a></li>
+                    <li><a href="cristaline.html" class="footer-link">Cristaline Mockup</a></li>
+                    <li><a href="bakkerij.html" class="footer-link">Bakkerij Website</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Socials</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-link social-icon-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/" target="_blank" class="footer-link social-icon-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 Isaac André. Alle rechten voorbehouden.</p>
+            <p class="footer-school">PXL — Digitale Vormgeving</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
