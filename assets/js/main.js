@@ -68,11 +68,13 @@ document.querySelectorAll('.project-card').forEach(card => {
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Zorg dat deze links EXACT kloppen met de bestanden in je map!
     const portfolioProjects = [
+        { url: "pokr-app.html", title: "Pokr" },
         { url: "kikk-festival.html", title: "KIKK Festival" },
         { url: "fontfolio.html", title: "Fontfolio" },
         { url: "cristaline.html", title: "Cristaline Rebrand" },
         { url: "takeaway.html", title: "Takeaway (DishDash)" },
         { url: "bakkerij.html", title: "Bakkerij Website" }
+
     ];
 
     const caseNav = document.getElementById('dynamic-case-nav');
@@ -121,5 +123,39 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             console.warn("Projectnavigatie kon niet geladen worden. Check of de bestandsnaam klopt in de array.");
         }
+    }
+});
+
+/* ================================================================
+   7. IMAGE LIGHTBOX (ZOOM FUNCTIE)
+================================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.modal-close');
+
+    if (modal && modalImg) {
+        // Selecteer alle afbeeldingen binnen je case-secties
+        const images = document.querySelectorAll('.case-image-grid img, .case-section-body img');
+
+        // Geef elke afbeelding een klik-event
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.classList.add('show');
+                modalImg.src = this.src; // Kopieer de klikbare afbeelding naar de grote weergave
+            });
+        });
+
+        // Sluit de modal door op het kruisje te klikken
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('show');
+            });
+        }
+
+        // Sluit de modal door eender waar op de donkere achtergrond of de foto te klikken
+        modal.addEventListener('click', (e) => {
+            modal.classList.remove('show');
+        });
     }
 });

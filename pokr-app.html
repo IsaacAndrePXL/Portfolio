@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokr App — Isaac André</title>
+    <title>Pokr App & Campagne — Isaac André</title>
     <link rel="icon" type="image/x-icon" href="assets/images/icons/Icon.svg">
+    <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -14,74 +15,167 @@
 <body>
 <div id="cursor"></div>
 
-<!-- NAV -->
-<nav id="navbar">
-    <a href="index.html" class="nav-logo">
-        <img src="assets/images/icons/LogoHero.png" alt="Isaac André" class="nav-logo-img" />
-    </a>
-    <ul class="nav-links">
-        <li><a href="index.html#about">Over Mij</a></li>
-        <li><a href="projects.html">Projecten</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HERO -->
 <header class="case-hero">
-    <div class="case-hero-bg">
-        <img src="assets/images/LogoPokr.png" alt="Pokr App" />
+    <div class="case-hero-bg" style="background-color: var(--bg); display: flex; justify-content: center; align-items: center;">
+        <img src="assets/images/LogoPokr.png" alt="Pokr App & Campagne" style="width: 50%; max-width: 400px; height: auto; object-fit: contain; opacity: 0.15;" />
     </div>
     <div class="case-hero-overlay"></div>
-    <div class="case-hero-content">
-        <a href="projects.html" class="case-back reveal">
+
+    <div class="case-hero-content" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; text-align: center; width: 90%; max-width: 800px;">
+        <a href="projects.html" class="case-back reveal" style="align-self: center; margin-bottom: 1.5rem;">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Terug naar overzicht
         </a>
-        <div class="case-meta reveal reveal-delay-1">
-            <span class="case-tag">App Design · UI/UX</span>
+        <div class="case-meta reveal reveal-delay-1" style="justify-content: center;">
+            <span class="case-tag">UI/UX · Branding</span>
             <span class="case-dot"></span>
             <span class="case-year">2026</span>
         </div>
-        <h1 class="case-title reveal reveal-delay-2">POKR<br>APP</h1>
-        <p class="case-subtitle reveal reveal-delay-3">
-            Een innovatieve applicatie-ervaring. (Deze case is momenteel in opbouw)
+        <h1 class="case-title reveal reveal-delay-2" style="text-align: center; margin: 1rem 0;">POKR APP<br>& CAMPAGNE</h1>
+        <p class="case-subtitle reveal reveal-delay-3" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            Werken als een winnende game, niet als een verplichting. Een innovatieve applicatie-ervaring voor KMO's.
         </p>
     </div>
 </header>
 
-<!-- CASE BODY -->
 <main class="case-body">
 
-    <div class="case-section reveal" style="text-align: center; padding: 6rem 0;">
-        <div class="case-section-body" style="margin: 0 auto; max-width: 600px;">
-            <img src="assets/images/LogoPokr.png" alt="Pokr Logo" style="max-width: 150px; margin-bottom: 2rem;">
-            <h2>Work In Progress</h2>
+    <div class="case-stats reveal">
+        <div class="case-stat">
+            <p class="stat-label">Project</p>
+            <p class="stat-value">App Design & Mockups</p>
+        </div>
+        <div class="case-stat">
+            <p class="stat-label">Tool</p>
+            <p class="stat-value">Figma & Illustrator</p>
+        </div>
+        <div class="case-stat">
+            <p class="stat-label">Doelgroep</p>
+            <p class="stat-value">Kleine KMO-teams</p>
+        </div>
+        <div class="case-stat">
+            <p class="stat-label">Focus</p>
+            <p class="stat-value">Gamification</p>
+        </div>
+    </div>
+
+    <div class="case-section reveal">
+        <p class="case-section-label">01 — Concept & UX</p>
+        <div class="case-section-body">
+            <h3>Doelen verankeren zonder KPI-stress.</h3>
             <p>
-                De case study voor de <strong>Pokr App</strong> wordt momenteel nog verder uitgewerkt en gedocumenteerd. 
-                Binnenkort vind je hier alle details over het proces, het design en de uiteindelijke uitwerking van deze applicatie.
+                Pokr is een mobile-first appconcept ontworpen voor kleine KMO-teams. Het pakt het probleem aan dat doelen vaak in onoverzichtelijke lijsten verdwijnen. Onze visie was om een werk-tool te maken die aanvoelt als een social app of game.
             </p>
-            <p style="margin-top: 2rem;">
-                <a href="projects.html" style="color: var(--accent); text-decoration: underline;">Ga terug naar de projecten</a>
+            <p>
+                Binnen het team ontwierp ik de UX/UI met de belofte: <em>"Alles in maximaal 3 kliks."</em> Door zachte kleuren, ronde vormen en 'card-design' profielen in plaats van saaie tabellen te gebruiken, creëerden we een positieve team-omgeving.
             </p>
         </div>
     </div>
 
-    <!-- CASE NAV -->
-    <nav class="case-nav reveal">
-        <a href="projects.html" class="case-nav-link prev">
+    <div class="case-section reveal">
+        <p class="case-section-label">02 — Interactief Prototype</p>
+        <div class="case-section-body">
+            <h3>Test de app zelf uit.</h3>
+            <p>
+                Hieronder kan je direct door het werkende prototype klikken. Ervaar de check-in flow, bekijk het teamoverzicht en zie hoe de gamification-mascotte je beloont na een afgeronde actie.
+            </p>
+
+            <div class="case-image-grid" style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem;">
+                <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); width: 100%; aspect-ratio: 16/9; position: relative;">
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="https://embed.figma.com/proto/r89VdJLnKsn6oNMBHhCTRI/Pokr?node-id=1939-4419&p=f&viewport=249%2C140%2C0.09&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1939%3A4419&show-proto-sidebar=1&page-id=1115%3A468&embed-host=share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-section reveal">
+        <p class="case-section-label">03 — Branding & Mockups</p>
+        <div class="case-section-body">
+            <h3>Een merk dat fysiek tot leven komt.</h3>
+            <p>
+                Naast de applicatie was ik verantwoordelijk voor de visuele merkuitoefening en promotiematerialen rondom de campagne <em>"It's not work. It's POKR."</em>. Om het product op beurzen en in het straatbeeld overtuigend te pitchen, vertaalde ik het digitale merk naar tastbare fysieke dragers.
+            </p>
+
+            <div class="case-image-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; align-items: stretch;">
+
+                <img src="assets/images/MockupLogo.png" alt="Pokr Logo Mockup" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;" />
+                <img src="assets/images/MockupTelefoonPokr.png" alt="Pokr App Phone Mockup" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;" />
+
+                <img src="assets/images/MockupExhibition.png" alt="Pokr Event Booth" style="width: 100%; border-radius: 8px; grid-column: span 2; object-fit: cover;" />
+                <img src="assets/images/MockUpBus.png" alt="Pokr Bus Branding" style="width: 100%; border-radius: 8px; grid-column: span 2; object-fit: cover;" />
+
+                <img src="assets/images/MockupLandyard.png" alt="Pokr Lanyards" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;" />
+                <img src="assets/images/MockupCalendar.png" alt="Pokr Desk Calendar" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;" />
+
+                <img src="assets/images/MockupSleutelhanger.png" alt="Pokr Sleutelhanger" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;" />
+                <img src="assets/images/MockupSticker.png" alt="Pokr Sticker" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;" />
+
+                <img src="assets/images/MockupNotepad.png" alt="Pokr Notepad" style="width: 100%; border-radius: 8px; grid-column: span 2; object-fit: cover;" />
+
+            </div>
+        </div>
+    </div>
+
+    <div class="case-section reveal">
+        <p class="case-section-label">04 — Het Volledige Verhaal</p>
+        <div class="case-section-body">
+            <h3>De finale eindpitch.</h3>
+            <p>
+                Benieuwd naar het volledige proces, de go-to-market strategie en de visuele keuzes achter dit project? Bekijk de volledige pitch presentatie die we hebben samengesteld voor de eindjury.
+            </p>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="assets/images/PokrSprint3Presentatie.pdf" target="_blank" class="primary-btn" style="display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; background-color: var(--accent); color: var(--bg); font-family: var(--font-heading); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; text-decoration: none; transition: transform 0.3s ease, background-color 0.3s ease;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 10px;">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path>
+                    </svg>
+                    Bekijk de Pitch Presentatie (PDF)
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<nav class="case-nav reveal" id="dynamic-case-nav">
+    <div class="case-nav-inner">
+        <!-- Vorig Project -->
+        <a href="#" class="case-nav-link prev" style="visibility: hidden;">
             <span class="case-nav-dir">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                     <path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Terug
+                Vorig Project
             </span>
-            <span class="case-nav-title">Alle Projecten</span>
+            <span class="case-nav-title">...</span>
         </a>
-    </nav>
-</main>
+
+        <!-- Terug naar overzicht (in het midden, blijft altijd zichtbaar) -->
+        <a href="projects.html" class="case-nav-overview case-nav-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            Overzicht
+        </a>
+
+        <!-- Volgend Project -->
+        <a href="#" class="case-nav-link next" style="visibility: hidden;">
+            <span class="case-nav-dir">
+                Volgend project
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span class="case-nav-title">...</span>
+        </a>
+    </div>
+</nav>
 
 <footer>
     <div class="footer-container">
@@ -112,8 +206,8 @@
                 <ul>
                     <li><a href="projects.html" class="footer-link">Alle Projecten</a></li>
                     <li><a href="cristaline.html" class="footer-link">Cristaline Mockup</a></li>
-                    <li><a href="projects/dishdash/Homepage.html" class="footer-link">DishDash App</a></li>
-                    <li><a href="projects/Bakkerij/index.html" class="footer-link">Bakkerij Website</a></li>
+                    <li><a href="takeaway.html" class="footer-link">DishDash App</a></li>
+                    <li><a href="bakkerij.html" class="footer-link">Bakkerij Website</a></li>
                 </ul>
             </div>
 
@@ -144,5 +238,9 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<div id="image-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
 </body>
 </html>
