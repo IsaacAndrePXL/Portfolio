@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="switching between case changes automatically">
+    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="added refelction wpl2 and digital-creations.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Fontfolio/Fontfolio-8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokr-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/pokr-app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Download/WPL1_Portfolio_IsaacAndre.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/Bakkerij/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Bakkerij/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +102,7 @@
       <workItem from="1779311467566" duration="1272000" />
       <workItem from="1779390819256" duration="9614000" />
       <workItem from="1779732235427" duration="68000" />
-      <workItem from="1780138353650" duration="7448000" />
+      <workItem from="1780138353650" duration="15303000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
@@ -180,7 +168,39 @@
       <option name="project" value="LOCAL" />
       <updated>1779398908744</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adeed project WPL2 &amp; pictures">
+      <option name="closed" value="true" />
+      <created>1780148962195</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1780148962195</updated>
+    </task>
+    <task id="LOCAL-00010" summary="adeed project WPL2 &amp; pictures">
+      <option name="closed" value="true" />
+      <created>1780155233485</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1780155233485</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added refelction wpl2 and digital-creations.html">
+      <option name="closed" value="true" />
+      <created>1780165870263</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780165870263</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added refelction wpl2 and digital-creations.html">
+      <option name="closed" value="true" />
+      <created>1780166286098</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1780166286098</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +212,9 @@
     <MESSAGE value="added privacy.html" />
     <MESSAGE value="added fontfolio, ominsoon, kikk festival" />
     <MESSAGE value="switching between case changes automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="switching between case changes automatically" />
+    <MESSAGE value="adeed project WPL2 &amp; pictures" />
+    <MESSAGE value="added refelction wpl2 and digital-creations.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="added refelction wpl2 and digital-creations.html" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

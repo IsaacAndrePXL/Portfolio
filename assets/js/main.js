@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { url: "cristaline.html", title: "Cristaline Rebrand" },
         { url: "takeaway.html", title: "Takeaway (DishDash)" },
         { url: "bakkerij.html", title: "Bakkerij Website" }
-
     ];
 
     const caseNav = document.getElementById('dynamic-case-nav');
@@ -97,28 +96,42 @@ document.addEventListener("DOMContentLoaded", () => {
             const prevLink = caseNav.querySelector('.prev');
             const nextLink = caseNav.querySelector('.next');
 
-            // Vorige knop instellen
+            // --- VORIGE KNOP INSTELLEN ---
             if (currentIndex > 0) {
                 let prevProject = portfolioProjects[currentIndex - 1];
                 prevLink.href = prevProject.url;
                 prevLink.querySelector('.case-nav-title').textContent = prevProject.title;
                 prevLink.style.visibility = 'visible';
                 prevLink.style.display = 'flex';
+                prevLink.style.opacity = '1';
+                prevLink.style.pointerEvents = 'auto'; // Maak klikbaar
             } else {
-                prevLink.style.visibility = 'hidden';
-                prevLink.style.display = 'none'; // Haal hem weg voor een mooiere layout als er geen vorig project is
+                // Afgegrijsde "Geen project" state (behoudt de layout!)
+                prevLink.href = "#";
+                prevLink.querySelector('.case-nav-title').textContent = "Geen project";
+                prevLink.style.visibility = 'visible';
+                prevLink.style.display = 'flex';
+                prevLink.style.opacity = '0.2'; // Maak lichtgrijs
+                prevLink.style.pointerEvents = 'none'; // Maak onklikbaar
             }
 
-            // Volgende knop instellen
+            // --- VOLGENDE KNOP INSTELLEN ---
             if (currentIndex < portfolioProjects.length - 1) {
                 let nextProject = portfolioProjects[currentIndex + 1];
                 nextLink.href = nextProject.url;
                 nextLink.querySelector('.case-nav-title').textContent = nextProject.title;
                 nextLink.style.visibility = 'visible';
                 nextLink.style.display = 'flex';
+                nextLink.style.opacity = '1';
+                nextLink.style.pointerEvents = 'auto'; // Maak klikbaar
             } else {
-                nextLink.style.visibility = 'hidden';
-                nextLink.style.display = 'none';
+                // Afgegrijsde "Geen project" state (behoudt de layout!)
+                nextLink.href = "#";
+                nextLink.querySelector('.case-nav-title').textContent = "Geen project";
+                nextLink.style.visibility = 'visible';
+                nextLink.style.display = 'flex';
+                nextLink.style.opacity = '0.2'; // Maak lichtgrijs
+                nextLink.style.pointerEvents = 'none'; // Maak onklikbaar
             }
         } else {
             console.warn("Projectnavigatie kon niet geladen worden. Check of de bestandsnaam klopt in de array.");

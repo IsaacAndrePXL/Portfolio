@@ -648,21 +648,31 @@ footer {
     letter-spacing: .12em;
 }
 
-/* ================================================================
-   LIGHTBOX / AFBEELDING ZOOM
+//* ================================================================
+   LIGHTBOX / AFBEELDING ZOOM (Met Bounce Animatie & Cursor Fix)
 ================================================================ */
 
-/* Geef de cursor een zoom-icoon als je over een afbeelding hovert */
+/* 1. Pas de cursor aan op inzoombare foto's (Handje i.p.v. Loep) */
 .case-image-grid img,
-.case-section-body img {
-    cursor: none;
+.case-section-body img,
+.creations-masonry-layout img {
+    cursor: pointer !important;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.case-image-grid img:hover {
+/* 2. Zorg dat jouw custom cursor ALTIJD boven de foto's zweeft */
+#cursor {
+    z-index: 100001 !important;
+    pointer-events: none;
+}
+
+/* 3. Lichte verduistering op de foto als je erover hovert */
+.case-image-grid img:hover,
+.creations-masonry-layout img:hover {
     filter: brightness(0.9);
 }
 
+/* 4. De zwarte, wazige achtergrond van de pop-up */
 .modal {
     display: none;
     position: fixed;
@@ -671,33 +681,42 @@ footer {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgb(15, 27, 44);
+    background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(5px);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease; /* Zachte overgang voor de achtergrond */
+    justify-content: center;
+    align-items: center;
 }
 
 .modal.show {
     display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 1;
 }
 
+/* 5. De ingezoomde foto zélf (Met de Bounce Animatie!) */
 .modal-content {
     max-width: 90%;
     max-height: 90vh;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-    cursor: zoom-out;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+
+    /* Start klein en doorzichtig voor de spring-animatie */
+    transform: scale(0.5);
+    opacity: 0;
+
+    /* Deze cubic-bezier is de magie: dit zorgt voor het 'bounce/spring' effect! */
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+    cursor: pointer; /* Handje zodat je snapt dat je hem kan wegklikken */
 }
 
+/* Zodra hij inlaadt, springt hij naar origineel formaat (1) */
 .modal.show .modal-content {
     transform: scale(1);
+    opacity: 1;
 }
 
+/* 6. Het Sluit-kruisje (X) rechtsboven */
 .modal-close {
     position: absolute;
     top: 30px;
@@ -707,10 +726,11 @@ footer {
     font-weight: 300;
     cursor: pointer;
     transition: color 0.3s ease;
+    z-index: 100000;
 }
 
 .modal-close:hover {
-    color: var(--accent);
+    color: var(--wisteria); /* Licht paars op als je erover hovert */
 }
 
 
