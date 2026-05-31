@@ -11,125 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/case.css" />
+    <link rel="stylesheet" href="assets/css/creations.css">
 
-    <style>
-        .creations-header {
-            max-width: 1200px;
-            margin: 8rem auto 3rem auto;
-            padding: 0 3rem;
-            animation: fadeInDown 0.8s ease forwards;
-        }
-
-        .creations-masonry-layout {
-            column-count: 3;
-            column-gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        @keyframes floatUp {
-            0% { opacity: 0; transform: translateY(40px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* KAART BASIS */
-        .creation-item {
-            break-inside: avoid;
-            margin-bottom: 1.5rem;
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-dim);
-            background: rgba(2, 5, 15, 0.4);
-            opacity: 0;
-
-            animation: floatUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            transition: border-color 0.3s, box-shadow 0.4s;
-        }
-
-        /* GEAUTOMATISEERDE DELAYS (Werkt nu soepel voor 30+ items) */
-        .creation-item:nth-child(1) { animation-delay: 0.1s; }
-        .creation-item:nth-child(2) { animation-delay: 0.15s; }
-        .creation-item:nth-child(3) { animation-delay: 0.2s; }
-        .creation-item:nth-child(4) { animation-delay: 0.25s; }
-        .creation-item:nth-child(5) { animation-delay: 0.3s; }
-        .creation-item:nth-child(6) { animation-delay: 0.35s; }
-        .creation-item:nth-child(7) { animation-delay: 0.4s; }
-        .creation-item:nth-child(8) { animation-delay: 0.45s; }
-        .creation-item:nth-child(9) { animation-delay: 0.5s; }
-        .creation-item:nth-child(10) { animation-delay: 0.55s; }
-        .creation-item:nth-child(11) { animation-delay: 0.6s; }
-        .creation-item:nth-child(12) { animation-delay: 0.65s; }
-        .creation-item:nth-child(13) { animation-delay: 0.7s; }
-        .creation-item:nth-child(14) { animation-delay: 0.75s; }
-        .creation-item:nth-child(15) { animation-delay: 0.8s; }
-        .creation-item:nth-child(16) { animation-delay: 0.85s; }
-        .creation-item:nth-child(17) { animation-delay: 0.9s; }
-        .creation-item:nth-child(18) { animation-delay: 0.95s; }
-        .creation-item:nth-child(19) { animation-delay: 1.0s; }
-        .creation-item:nth-child(20) { animation-delay: 1.05s; }
-        /* Als je er nog meer toevoegt later, vul je het gewoon aan met 0.05 sprongen! */
-
-        /* RUSTIGE HOVER */
-        .creation-item:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-            border-color: var(--wisteria);
-            z-index: 10;
-        }
-
-        /* FOTO ZOOM ANIMATIE */
-        .creation-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            cursor: pointer !important;
-            transition: filter 0.4s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .creation-item:hover img {
-            transform: scale(1.06);
-            filter: brightness(0.85);
-        }
-
-        /* TEKSTBLOK (Staat MUURVAST op de voorgrond) */
-        .creation-info {
-            padding: 1.2rem;
-            border-top: 1px solid var(--border-dim);
-            background: rgba(2, 5, 15, 0.6);
-            position: relative;
-            z-index: 2;
-        }
-
-        .creation-info h4 {
-            font-family: var(--ff-sub);
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--white);
-            margin-bottom: 0.2rem;
-        }
-
-        .creation-info p {
-            font-family: var(--ff-sub);
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--wisteria);
-        }
-
-        @keyframes fadeInDown {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 1024px) {
-            .creations-masonry-layout { column-count: 2; }
-        }
-
-        @media (max-width: 768px) {
-            .creations-header { padding: 0 1.5rem; margin-top: 6rem; }
-            .creations-masonry-layout { column-count: 1; }
-        }
-    </style>
 </head>
 <body>
 <div id="cursor"></div>
@@ -141,7 +24,7 @@
 </nav>
 
 <div class="creations-header">
-    <a href="index.html" class="case-back" style="margin-bottom: 2rem; display: inline-flex; text-decoration: none;">
+    <a href="projects.html" class="case-back" style="margin-bottom: 2rem; display: inline-flex; text-decoration: none;">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>

@@ -1,42 +1,85 @@
 # Portfolio — Isaac André
 
-## Mappenstructuur
+Persoonlijke portfoliowebsite gebouwd als educatief schoolproject aan **Hogeschool PXL Hasselt**, opleiding **Digitale Vormgeving**.
+
+---
+
+## Over dit project
+
+Een statische portfoliowebsite die mijn werk, skills en designfilosofie presenteert. Het ontwerp is gebaseerd op **minimalisme en typografie-first design** — clean, modern en functioneel.
+
+De site bevat:
+- **Hero-sectie** met reveal-animaties en scroll-hint
+- **Over mij** met bio, stijlchips en statistieken
+- **Projectenpagina** (`Projecten.html`) met geselecteerde werken
+- **Skills & Stack** met scrollende marquee-animatie
+- **Contactsectie** met e-mail en sociale links
+- Aangepaste **cursor** en smooth scroll-gedrag
+
+---
+
+## Projecten in de repo
+
+| Map | Beschrijving |
+|---|---|
+| `Bakkerij/` | Website voor een bakkerij |
+| `dishdash/` | DishDash webproject |
+| `visuals/` | Grafische assets en visuals |
+| `pictures/` | Afbeeldingen gebruikt in de site |
+
+---
+
+## Tech Stack
+
+![HTML](https://img.shields.io/badge/HTML-34.6%25-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-46.0%25-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-19.4%25-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
+- Vanilla HTML, CSS en JavaScript — geen frameworks
+- Google Fonts: Bebas Neue, Barlow Condensed, DM Sans
+- Gehost op **Netlify**: [isaacandredvoportfolio.netlify.app](https://isaacandredvoportfolio.netlify.app)
+
+---
+
+## Structuur
+
 ```
 Portfolio/
-├── index.html          ← hoofdpagina
-├── projects.html       ← projectenpagina (was Projecten.html)
-├── links.html          ← linkspagina
-├── assets/
-│   ├── css/
-│   │   ├── style.css       ← globale stijlen
-│   │   ├── projects.css    ← stijlen voor projects.html
-│   │   └── links.css       ← stijlen voor links.html
-│   ├── js/
-│   │   ├── main.js         ← globale scripts
-│   │   ├── projects.js     ← scripts voor projects.html (was design.js)
-│   │   └── links.js        ← scripts voor links.html
-│   └── images/
-│       ├── icons/          ← favicon, apple-touch-icon
-│       ├── LogoHero.png
-│       ├── LogoIsaac.png
-│       └── IsaacPFP.png
-└── projects/
-    ├── bakkerij/       ← bestanden van het bakkerij-project
-    └── dishdash/       ← bestanden van het dishdash-project
+├── Index.html          # Hoofdpagina (hero, about, skills, contact)
+├── Projecten.html      # Projectenoverzicht
+├── links.html          # Linkspagina
+├── style.css           # Globale stijlen
+├── projects.css        # Stijlen voor projectenpagina
+├── links.css           # Stijlen voor linkspagina
+├── main.js             # Animaties & interactie (hoofdpagina)
+├── design.js           # Design helpers
+├── links.js            # Logica linkspagina
+├── pictures/           # Afbeeldingen & favicon
+├── visuals/            # Grafische assets
+├── Bakkerij/           # Bakkerij project
+└── dishdash/           # DishDash project
 ```
 
-## Wat er veranderd is
-- `Index.html` → `index.html` (lowercase)
-- `Projecten.html` → `projects.html` (lowercase + Engels)
-- Alle CSS staat nu in `assets/css/`
-- Alle JS staat nu in `assets/js/`
-- Alle afbeeldingen staan in `assets/images/`
-- `pictures/` map → hernoemd naar `assets/images/`
-- `design.js` → hernoemd naar `assets/js/projects.js`
+---
 
-## Stap voor stap in git
+## Lokaal bekijken
+
 ```bash
-git add .
-git commit -m "refactor: nieuwe mappenstructuur"
-git push
+git clone https://github.com/IsaacAndrePXL/Portfolio.git
+cd Portfolio
+# Open Index.html in je browser
 ```
+
+Geen installatie of build-stap nodig — gewoon het HTML-bestand openen volstaat.
+
+---
+
+## Contact
+
+**Isaac André** — Student Digitale Vormgeving @ PXL Hasselt  
+📧 [isaac.andre@student.pxl.be](mailto:isaac.andre@student.pxl.be)  
+🐙 [github.com/IsaacAndrePXL](https://github.com/IsaacAndrePXL)
+
+---
+
+*© 2025 Isaac André · Educatief schoolproject · PXL Hasselt*

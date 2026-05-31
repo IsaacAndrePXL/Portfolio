@@ -1,7 +1,3 @@
-/* ================================================================
-   ISAAC ANDRÉ — PROJECTS PAGE SCRIPTS
-================================================================ */
-
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projCards  = document.querySelectorAll('.proj-card');
 const projRows   = document.querySelectorAll('.proj-row');
@@ -16,21 +12,16 @@ filterBtns.forEach(btn => {
         let visible = 0;
 
         projCards.forEach(card => {
-            const cats = card.dataset.category || '';
-            const show = filter === 'all' || cats.includes(filter);
+            const show = filter === 'all' || (card.dataset.category || '').includes(filter);
             card.classList.toggle('hidden', !show);
             if (show) visible++;
         });
 
-        // Hide .proj-row if both children are hidden
         projRows.forEach(row => {
-            const anyVisible = [...row.querySelectorAll('.proj-card')]
-                .some(c => !c.classList.contains('hidden'));
+            const anyVisible = [...row.querySelectorAll('.proj-card')].some(c => !c.classList.contains('hidden'));
             row.classList.toggle('hidden', !anyVisible);
         });
 
-        if (emptyState) {
-            emptyState.classList.toggle('visible', visible === 0);
-        }
+        if (emptyState) emptyState.classList.toggle('visible', visible === 0);
     });
 });
