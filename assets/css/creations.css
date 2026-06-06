@@ -75,11 +75,10 @@
     filter: brightness(0.85);
 }
 
-/* TEKSTBLOK (Staat MUURVAST op de voorgrond) */
 .creation-info {
     padding: 1.2rem;
     border-top: 1px solid var(--border-dim);
-    background: rgba(2, 5, 15, 0.6);
+    background: var(--ink);
     position: relative;
     z-index: 2;
 }
