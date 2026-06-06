@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="adde digtal creations">
-      <change afterPath="$PROJECT_DIR$/assets/css/creations.css" afterDir="false" />
+    <list default="true" id="40a14ad5-658c-4a9e-b286-77834f810fec" name="Changes" comment="all css and js files are optimized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/case.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/case.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/links.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/links.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/projects.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/links.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/links.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bakkerij.html" beforeDir="false" afterPath="$PROJECT_DIR$/bakkerij.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brand-identity.html" beforeDir="false" afterPath="$PROJECT_DIR$/brand-identity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coming-soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/coming-soon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cristaline.html" beforeDir="false" afterPath="$PROJECT_DIR$/cristaline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/digital-creations.html" beforeDir="false" afterPath="$PROJECT_DIR$/digital-creations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eindreflectie.html" beforeDir="false" afterPath="$PROJECT_DIR$/eindreflectie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fontfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/fontfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kikk-festival.html" beforeDir="false" afterPath="$PROJECT_DIR$/kikk-festival.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokr-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/pokr-app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dishdash/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/takeaway.html" beforeDir="false" afterPath="$PROJECT_DIR$/takeaway.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +117,9 @@
       <workItem from="1780220342664" duration="23000" />
       <workItem from="1780221929713" duration="631000" />
       <workItem from="1780242822002" duration="2029000" />
-      <workItem from="1780250608195" duration="3571000" />
+      <workItem from="1780250608195" duration="5272000" />
+      <workItem from="1780326417213" duration="1349000" />
+      <workItem from="1780681846284" duration="3874000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, transferred project from rep">
       <option name="closed" value="true" />
@@ -241,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780171742850</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="all css and js files are optimized">
+      <option name="closed" value="true" />
+      <created>1780259662072</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1780259662072</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +264,8 @@
     <MESSAGE value="adeed project WPL2 &amp; pictures" />
     <MESSAGE value="added refelction wpl2 and digital-creations.html" />
     <MESSAGE value="adde digtal creations" />
-    <option name="LAST_COMMIT_MESSAGE" value="adde digtal creations" />
+    <MESSAGE value="all css and js files are optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="all css and js files are optimized" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
