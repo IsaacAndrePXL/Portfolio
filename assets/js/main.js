@@ -56,11 +56,10 @@ document.querySelectorAll('.project-card').forEach(card => {
 /* ── PROJECT NAVIGATION ───────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     const portfolioProjects = [
-        { url: 'brand-identity.html',    title: 'ISAAC Branding' },
-        { url: 'digital-creations.html', title: 'Digital Creations' },
-        { url: 'pokr-app.html',          title: 'Pokr App' },
-        { url: 'kikk-festival.html',     title: 'KIKK Festival' },
-        { url: 'fontfolio.html',         title: 'Fontfolio' },
+        { url: 'pokr-app.html',          title: 'Werkplekleren 2 (POKR)' },
+        { url: 'brand-identity.html',    title: 'ISAAC Streetwear' },
+        { url: 'kikk-festival.html',     title: 'KIKK Festival 2026' },
+        { url: 'fontfolio.html',         title: 'Fontfolio ITC Benguiat' },
         { url: 'cristaline.html',        title: 'Cristaline Rebrand' },
         { url: 'takeaway.html',          title: 'Takeaway (DishDash)' },
         { url: 'bakkerij.html',          title: 'Bakkerij Website' }
