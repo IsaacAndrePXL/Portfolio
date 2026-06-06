@@ -34,7 +34,7 @@
     border-bottom: 1px solid var(--border-dim);
     padding: 0 3rem;
     position: sticky;
-    top: 68px;
+    top: 80px;
     z-index: 50;
     backdrop-filter: blur(12px);
     background: rgba(2,5,15,.85);
@@ -264,10 +264,19 @@
     .proj-img { min-height: 260px; }
     .proj-row { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 900px) {
+    .filter-bar { top: 58px; }
+}
+
 @media (max-width: 700px) {
     .page-header { padding: 8rem 1.5rem 4rem; }
     .filter-bar { padding: 0 1.5rem; }
     .projects-grid-wrap { padding: 3rem 1.5rem 2rem; }
     .proj-info { padding: 2rem 1.5rem; }
     .proj-title { font-size: 2.2rem; }
+}
+
+@media (max-width: 600px) {
+    .filter-bar { top: 54px; }
 }

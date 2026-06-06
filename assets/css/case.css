@@ -401,8 +401,6 @@
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
-
-    /* HERO */
     .case-hero {
         min-height: auto;
         padding: 6rem 1rem 1.5rem;
@@ -439,7 +437,6 @@
         font-size: .6rem;
     }
 
-    /* BACK BUTTON = alleen pijltje */
     .case-back {
         font-size: 0;
         width: 40px;
@@ -456,7 +453,6 @@
         height: 22px;
     }
 
-    /* BODY */
     .case-body {
         padding: 2rem 1rem;
     }
@@ -482,7 +478,6 @@
         line-height: 1.6;
     }
 
-    /* STATS */
     .case-stats {
         grid-template-columns: 1fr;
     }
@@ -493,21 +488,75 @@
         border-bottom: 1px solid var(--border-dim);
     }
 
-    /* NAV */
-    .case-nav-inner {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
+    .case-nav {
+        padding: 15px 0;
     }
 
-    .case-nav-center {
-        padding: 1rem;
+    .case-nav-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    .case-nav-link {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        max-width: 38%;
+    }
+
+    .case-nav-link.next {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .case-nav-dir {
+        font-size: 0;
+        gap: 0;
+        margin: 0;
+    }
+
+    .case-nav-dir svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
     }
 
     .case-nav-title {
-        font-size: 1.2rem;
+        display: block !important;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
-    /* IMAGES */
+    .case-nav-center {
+        padding: 0 5px;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .case-nav-overview {
+        font-size: 0.65rem;
+        gap: 4px;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-nav-overview svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .case-images-2,
     .case-fonts {
         grid-template-columns: 1fr;

@@ -113,3 +113,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.remove('show'));
     modal.addEventListener('click', () => modal.classList.remove('show'));
 });
+
+/* ── HAMBURGER MENU ───────────────────────────────────────────── */
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navLinksList = document.getElementById('nav-links');
+
+if (hamburgerBtn && navLinksList) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        navLinksList.classList.toggle('active');
+
+        document.body.style.overflow = navLinksList.classList.contains('active') ? 'hidden' : '';
+    });
+
+    navLinksList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            navLinksList.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
